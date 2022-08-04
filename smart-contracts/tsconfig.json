@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "outDir": "dist",
+      "resolveJsonModule": true
+    },
+    "include": ["./test", "./deployment", "./tools"],
+    "files": ["./hardhat.config.ts"]
+  }
