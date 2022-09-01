@@ -1,0 +1,19 @@
+@startuml
+autonumber "<b>[00]"
+
+actor "Funder" as FUND
+participant "User App" as UAPP
+participant "Backend" as BACK
+participant "Carbon Credit Contract" as CCCO
+
+
+== Buy Coins ==
+
+FUND -> UAPP: buy coins
+UAPP -> BACK: buy coins (buyer, seller)
+BACK -> CCCO: transfer coins (seller, buyer)
+CCCO --> BACK: OK
+BACK --> UAPP: OK
+UAPP --> FUND: OK
+
+@enduml

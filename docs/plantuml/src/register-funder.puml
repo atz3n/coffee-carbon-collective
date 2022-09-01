@@ -1,0 +1,19 @@
+@startuml
+autonumber "<b>[00]"
+
+actor "Funder" as FUND
+participant "User App" as UAPP
+participant "Backend" as BACK
+
+
+== Register Funder ==
+
+FUND -> UAPP: enter funder information
+FUND -> UAPP: create Account
+UAPP -> BACK: create Acccont
+BACK -> BACK: store information
+BACK -> BACK: create Account
+BACK --> UAPP: OK
+UAPP --> FUND: OK
+
+@enduml

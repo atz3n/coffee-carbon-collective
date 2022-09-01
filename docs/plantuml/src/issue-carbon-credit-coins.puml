@@ -1,0 +1,14 @@
+@startuml
+autonumber "<b>[00]"
+
+participant "Backend" as BACK
+participant "Carbon Credit Contract" as CCCO
+
+
+== Issue Coins ==
+
+BACK -> BACK: process due dilligence
+BACK -> CCCO: inscrease supply (supply, owner)
+CCCO --> BACK: OK
+
+@enduml
