@@ -1,9 +1,9 @@
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { expect } from "chai";
 import { ethers } from "hardhat";
-import { FarmlandRegistry } from "../typechain";
-import { deploy } from "../utils/deployer";
-import { untilSettled } from "../utils/txHelper";
+import { FarmlandRegistry } from "../../typechain";
+import { deploy } from "../../utils/deployer";
+import { untilSettled } from "../../utils/txHelper";
 
 
 describe("FarmlandRegistry mint", function() {

@@ -1,5 +1,5 @@
 {
-    "name": "event-bus",
+    "name": "ccc-contracts",
     "license": "GPL-3.0-only",
     "scripts": {
         "build": "npx hardhat compile",
@@ -7,6 +7,7 @@
         "test": "REPORT_GAS=true npx hardhat test",
         "coverage": "npx hardhat coverage",
         "deploy:registry": "npx hardhat run --network evm deployment/deployRegistry.ts",
+        "deploy:token": "npx hardhat run --network evm deployment/deployToken.ts",
         "check:contract": "ts-node ./tools/contractDeploymentChecker.ts ${RPC_URL} ${CONTRACT_ADDRESS}"
     },
     "devDependencies": {
