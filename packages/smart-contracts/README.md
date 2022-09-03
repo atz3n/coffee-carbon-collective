@@ -18,14 +18,14 @@ yarn build
 # clean build production
 yarn build:clean
 
-# deploy to local chain
+# deploy farmland registry to local chain
 ## CAUTION: you must have a local custom chain running. See ../../ganache folder
-RPC_URL=http://localhost:8545 DEPLOYER_SECRET=0x786e523ddd21e8c2524ea5da3c8b9b0498b40419aee35e131a6219212ee66b76 yarn deploy
+RPC_URL=http://localhost:8545 DEPLOYER_SECRET=0x3981c0fb9704e9fe87b27c8a7678fcd680d8c7f142ef6be886e994ad0e9a1a18 yarn deploy:registry
 
 # or use the following command to check if it's already deployed before deploying it
 # (use ./scripts/deploy.sh -h for help)
 
-./scripts/deploy.sh -u http://localhost:8545 -s 0x786e523ddd21e8c2524ea5da3c8b9b0498b40419aee35e131a6219212ee66b76 -c 0xC0156004b2dC4AA2FA30FD0F5E06b7022c718da7
+./scripts/deploy.sh -u http://localhost:8545 -s 0x3981c0fb9704e9fe87b27c8a7678fcd680d8c7f142ef6be886e994ad0e9a1a18 -c 0xe69040B036FaF59C62455e826D971A22EE8EEcd0 -o registry
 ```
 
 

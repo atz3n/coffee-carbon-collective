@@ -6,22 +6,24 @@
 # CONFIGURATION
 ###################################################################################################
 
-CONTRACT_ADDRESS="0xC0156004b2dC4AA2FA30FD0F5E06b7022c718da7"
+CONTRACT_ADDRESS="0xe69040B036FaF59C62455e826D971A22EE8EEcd0"
 RPC_URL="http://localhost:8545"
-DEPLOYER_SECRET="0x786e523ddd21e8c2524ea5da3c8b9b0498b40419aee35e131a6219212ee66b76"
+DEPLOYER_SECRET="0x3981c0fb9704e9fe87b27c8a7678fcd680d8c7f142ef6be886e994ad0e9a1a18"
+DEPLOY_OPTION="registry"
 
 
 ###################################################################################################
 # PARAMETER PARSING
 ###################################################################################################
 
-while getopts "h?u:c:s:" opt; do
+while getopts "h?u:c:s:f:" opt; do
     case "$opt" in
         h)
             echo "Parameter: [<value> / (flag)]"
             echo "-c <contract address>"
             echo "-s <deployer secret>"
             echo "-u <rpc url>"
+            echo "-p <deploy command option>"
             exit 0
             ;;
         c)
@@ -32,6 +34,12 @@ while getopts "h?u:c:s:" opt; do
             ;;
         u)
             RPC_URL=$OPTARG
+            ;;
+        u)
+            RPC_URL=$OPTARG
+            ;;
+        o)
+            DEPLOY_OPTION=$OPTARG
             ;;
     esac
 done
@@ -50,13 +58,17 @@ HERE="$(pwd)/$(dirname $0)"
 
 cd ${HERE}/..
 
+if [ ! -z ${DEPLOY_OPTION} ]; then
+    DEPLOY_OPTION=:${DEPLOY_OPTION}
+fi
+
 echo "Check if contract is already deployed..."
 RPC_URL=${RPC_URL} CONTRACT_ADDRESS=${CONTRACT_ADDRESS} yarn check:contract
 EXIT_CODE=$(echo $?)
 
 if [ ${EXIT_CODE} == 3 ]; then # not deployed
     echo "Not deployed (exit code 3). Deploying..."
-    RPC_URL=${RPC_URL} DEPLOYER_SECRET=${DEPLOYER_SECRET} yarn deploy
+    RPC_URL=${RPC_URL} DEPLOYER_SECRET=${DEPLOYER_SECRET} yarn deploy${DEPLOY_OPTION}
 elif [ ${EXIT_CODE} == 2 ]; then # error
     exit 1;
 else
