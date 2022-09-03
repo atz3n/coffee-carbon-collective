@@ -1,6 +1,7 @@
 {
     "name": "ccc-contracts",
     "license": "GPL-3.0-only",
+    "version": "1.0.0",
     "scripts": {
         "build": "npx hardhat compile",
         "build:clean": "rm -rf artifacts/ cache/ typechain/ && npx hardhat compile",

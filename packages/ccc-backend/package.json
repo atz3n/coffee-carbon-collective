@@ -1,6 +1,7 @@
 {
     "name": "company-client",
     "license": "GPL-3.0-only",
+    "version": "1.0.0",
     "scripts": {
         "start": "node ./dist/src/main.js",
         "dev": "RUN_CONTEXT=development yarn dev:cmd",
