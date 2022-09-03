@@ -1,6 +1,6 @@
-import { IFarmlandStore } from "../../../../storage/farmland/IFarmlandStore";
-import { logger } from "../../../../utils/logger";
-import { ContractEventService } from "../../../ContractEventHandler";
+import { IFarmlandStore } from "../../../storage/farmland/IFarmlandStore";
+import { logger } from "../../../utils/logger";
+import { ContractEventService } from "../../ContractEventHandler";
 import { Event } from "ethers";
 
 

@@ -1,8 +1,8 @@
-import { BlockchainInfoStore } from "../../../../storage/blockchain/BlockchainInfoStore";
-import { CoinHolderStore } from "../../../../storage/coin-holder/CoinHolderStore";
-import { BlockHeightService } from "../../../common/BlockHeightService";
-import { MintCheckerService } from "../../../common/MintCheckerService";
-import { ContractEventListener } from "../../../ContractEventHandler";
+import { BlockchainInfoStore } from "../../../storage/blockchain/BlockchainInfoStore";
+import { CoinHolderStore } from "../../../storage/coin-holder/CoinHolderStore";
+import { BlockHeightService } from "../../common/BlockHeightService";
+import { MintCheckerService } from "../../common/MintCheckerService";
+import { ContractEventListener } from "../../ContractEventHandler";
 import { CoinMintService } from "./CoinMintService";
 
 

@@ -1,7 +1,7 @@
 import { Event } from "ethers";
-import { ICoinHolderStore } from "../../../../storage/coin-holder/ICoinHolderStore";
-import { logger } from "../../../../utils/logger";
-import { ContractEventService } from "../../../ContractEventHandler";
+import { ICoinHolderStore } from "../../../storage/coin-holder/ICoinHolderStore";
+import { logger } from "../../../utils/logger";
+import { ContractEventService } from "../../ContractEventHandler";
 
 
 interface CoinMintServiceOptions {

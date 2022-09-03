@@ -4,9 +4,9 @@ import { ContractEventHandler } from "./ContractEventHandler";
 import { catchUpEvents } from "./eventCatchUpper";
 import { CarbonCreditCoin } from "./interfaces/CarbonCreditCoin";
 import { FarmlandRegistry } from "./interfaces/FarmlandRegistry";
-import { createCoinMintListener } from "./listeners/coin/coin-mint/coinMint";
-import { createCoinTransferListener } from "./listeners/coin/coin-transfer/coinTransfer";
-import { createFarmlandMintListener } from "./listeners/registry/farmland-mint/farmlandMint";
+import { createCoinMintListener } from "./listeners/coin-mint/coinMint";
+import { createCoinTransferListener } from "./listeners/coin-transfer/coinTransfer";
+import { createFarmlandMintListener } from "./listeners/farmland-mint/farmlandMint";
 
 
 export async function initContractListeners(farmlandRegistry: FarmlandRegistry, carbonCreditCoin: CarbonCreditCoin): Promise<void> {
