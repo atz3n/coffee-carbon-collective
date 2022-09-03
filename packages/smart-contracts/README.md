@@ -1,6 +1,6 @@
 # Smart Contracts
 
-This folder contains the event bus project. To begin development, you must have [Node.js](https://nodejs.org/en/) and the [Yarn](https://yarnpkg.com) package manager installed.
+This folder contains the ccc contracts project. To begin development, you must have [Node.js](https://nodejs.org/en/) and the [Yarn](https://yarnpkg.com) package manager installed.
 
 
 ## Commands
