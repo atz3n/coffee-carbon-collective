@@ -1,11 +1,11 @@
 {
-    "editor.tabSize": 4,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    },
-    "git.ignoreLimitWarning": true,
-    "plantuml.diagramsRoot": "docs/plantuml/src",
-    "plantuml.exportOutDir": "docs/plantuml/out",
-    "plantuml.exportSubFolder": false,
-    "solidity.packageDefaultDependenciesDirectory": "packages/smart-contracts/node_modules"
+  "editor.tabSize": 4,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "git.ignoreLimitWarning": true,
+  "plantuml.diagramsRoot": "docs/plantuml/src",
+  "plantuml.exportOutDir": "docs/plantuml/out",
+  "plantuml.exportSubFolder": false,
+  "solidity.packageDefaultDependenciesDirectory": "packages/smart-contracts/node_modules"
 }
