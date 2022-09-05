@@ -1,4 +1,4 @@
-# CCC Backend
+# backend
 
 This folder contains the ccc' backend project. To begin development, you must have [Node.js](https://nodejs.org/en/) and the [Yarn](https://yarnpkg.com) package manager installed.
 
