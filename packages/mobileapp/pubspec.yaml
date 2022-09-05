@@ -36,6 +36,7 @@ dependencies:
   flutter_riverpod: ^1.0.4
   pixel_perfect: ^1.1.1
   flutter_native_splash: ^2.2.8
+  carbon_flutter: ^0.11.1
 
 dev_dependencies:
   flutter_test:
