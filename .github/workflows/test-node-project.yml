@@ -27,9 +27,9 @@ jobs:
       - name: Lint project
         run: |
           cd ./${{ inputs.project_dir }}
-          yarn lint
+          yarn ci:lint
 
       - name: Run tests
         run: |
           cd ./${{ inputs.project_dir }}
-          yarn test
+          yarn ci:test

@@ -7,7 +7,9 @@
         "build": "rm -rf ./dist && tsc",
         "lint": "eslint ./ --ext .ts",
         "lint:fix": "eslint ./ --fix --ext .ts",
-        "test": "RUN_CONTEXT=test jest --testEnvironment=node --verbose"
+        "test": "RUN_CONTEXT=test jest --testEnvironment=node --verbose",
+        "ci:lint": "yarn lint",
+        "ci:test": "yarn test"
     },
     "devDependencies": {
         "@types/body-parser": "^1.19.0",
