@@ -1,0 +1,16 @@
+name: test backend
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - packages/backend/**
+
+jobs:
+  test-backend:
+    uses: ./.github/workflows/test-node-project.yml
+    secrets: inherit
+    with:
+      project_dir: packages/backend

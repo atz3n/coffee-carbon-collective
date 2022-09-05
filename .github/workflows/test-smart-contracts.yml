@@ -1,0 +1,16 @@
+name: test smart contracts
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - packages/smart-contracts/**
+
+jobs:
+  test-smart-contracts:
+    uses: ./.github/workflows/test-node-project.yml
+    secrets: inherit
+    with:
+      project_dir: packages/smart-contracts

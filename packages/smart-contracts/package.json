@@ -5,6 +5,7 @@
         "build": "npx hardhat compile",
         "build:clean": "rm -rf artifacts/ cache/ typechain/ && npx hardhat compile",
         "test": "REPORT_GAS=true npx hardhat test",
+        "lint": "echo 'not implemented'",
         "coverage": "npx hardhat coverage",
         "deploy:registry": "npx hardhat run --network evm deployment/deployRegistry.ts",
         "deploy:coin": "npx hardhat run --network evm deployment/deployCoin.ts",
