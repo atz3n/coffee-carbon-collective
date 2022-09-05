@@ -1,0 +1,18 @@
+@startuml
+autonumber "<b>[00]"
+
+participant "Backend" as BACK
+participant "Farmland Contract" as FACO
+participant "File Coin" as FICO
+
+
+== Update Farmland ==
+
+BACK -> BACK: collect new meta data
+BACK -> FICO: store metadata
+FICO --> BACK: return cid
+BACK -> FACO: update NFT URI
+FACO --> BACK: OK
+
+
+@enduml

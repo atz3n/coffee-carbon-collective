@@ -1,0 +1,24 @@
+@startuml
+autonumber "<b>[00]"
+
+actor "Farmer" as FARM
+participant "User App" as UAPP
+participant "Backend" as BACK
+participant "Farmland Contract" as FACO
+participant "File Coin" as FICO
+
+
+== Register Farmland ==
+
+FARM -> UAPP: enter farmland information
+FARM -> UAPP: register farmland
+UAPP -> BACK: register farmland
+BACK -> FICO: store metadata
+FICO --> BACK: return cid
+BACK -> FACO: create NFT
+FACO --> BACK: OK
+BACK --> UAPP: OK
+UAPP --> FARM: OK
+
+
+@enduml

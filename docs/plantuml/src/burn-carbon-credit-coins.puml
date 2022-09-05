@@ -1,0 +1,19 @@
+@startuml
+autonumber "<b>[00]"
+
+actor "Funder" as FUND
+participant "User App" as UAPP
+participant "Backend" as BACK
+participant "Carbon Credit Contract" as CCCO
+
+
+== Burn Coins ==
+
+FUND -> UAPP: burn coins
+UAPP -> BACK: burn coins (amount, owner)
+BACK -> CCCO: burn coins (amount, owner)
+CCCO --> BACK: OK
+BACK --> UAPP: OK
+UAPP --> FUND: OK
+
+@enduml

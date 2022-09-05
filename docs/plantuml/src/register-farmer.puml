@@ -1,0 +1,19 @@
+@startuml
+autonumber "<b>[00]"
+
+actor "Farmer" as FARM
+participant "User App" as UAPP
+participant "Backend" as BACK
+
+
+== Register Farmer ==
+
+FARM -> UAPP: enter farmer information
+FARM -> UAPP: create Account
+UAPP -> BACK: create Acccont
+BACK -> BACK: store information
+BACK -> BACK: create Account
+BACK --> UAPP: OK
+UAPP --> FARM: OK
+
+@enduml
