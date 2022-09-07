@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:mobileapp/views/login_screen.dart';
+import 'package:mobileapp/views/login_screen/login_screen.dart';
 
 import './core/core_shelf.dart';
 

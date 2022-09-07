@@ -1,6 +1,6 @@
 import 'package:carbon_flutter/features/index.dart';
 import 'package:flutter/material.dart';
-import 'package:pixel_perfect/pixel_perfect.dart';
+import './login_widgets.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({
@@ -45,6 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   label: "Sign In",
                   onTap: () {
                     debugPrint("Sign In");
+                    //navigate(HomeScreen())
                   },
                   expand: true,
                   kind: CButtonKind.tertiary,
@@ -59,23 +60,4 @@ class _LoginScreenState extends State<LoginScreen> {
       // ),
     );
   }
-}
-
-Widget textFormWidget(String title) {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Text(
-        title,
-      ),
-      const SizedBox(height: 16),
-      const TextField(
-        enabled: true,
-        decoration: InputDecoration(
-            fillColor: Color.fromARGB(255, 236, 236, 236),
-            filled: true,
-            border: UnderlineInputBorder(borderRadius: BorderRadius.zero)),
-      ),
-    ],
-  );
 }
