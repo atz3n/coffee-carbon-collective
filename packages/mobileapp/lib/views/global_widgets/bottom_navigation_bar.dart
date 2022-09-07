@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobileapp/core/core_shelf.dart';
 
 BottomNavigationBar bottomNavigationBar(
     int selectedIndex, void Function(int) onTap) {
@@ -18,8 +19,8 @@ BottomNavigationBar bottomNavigationBar(
       ),
     ],
     currentIndex: selectedIndex,
-    selectedItemColor: const Color(0xff161616),
+    selectedItemColor: HexColor("#161616"),
     onTap: onTap,
-    unselectedItemColor: const Color(0xff8D8D8D),
+    unselectedItemColor: HexColor("#8D8D8D"),
   );
 }
