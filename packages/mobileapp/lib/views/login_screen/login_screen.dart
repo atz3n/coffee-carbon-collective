@@ -15,11 +15,6 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    // return PixelPerfect(
-    //   assetPath: "assets/signin.png",
-    //   scale: 0.9, // scale value (optional)
-    //   initOpacity: 0.4,
-    //   child:
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
