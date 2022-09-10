@@ -20,9 +20,12 @@ SliverAppBar sliverAppBar(
       backgroundColor: HexColor("#060606"),
       automaticallyImplyLeading: false,
       title: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(title.label),
-          if (title.subLabel is String) Text(title.subLabel!),
+          if (title.subLabel is String)
+            Text(title.subLabel!,
+                style: const TextStyle(fontWeight: FontWeight.w300)),
         ],
       ),
       centerTitle: title.center,
