@@ -17,11 +17,11 @@ BottomNavigationBar bottomNavigationBar(
         icon: Icon(
           CIcons.wallet,
         ),
-        label: 'Business',
+        label: 'Wallet',
       ),
       const BottomNavigationBarItem(
         icon: Icon(CIcons.user),
-        label: 'School',
+        label: 'Profile',
       ),
     ],
     currentIndex: selectedIndex,
