@@ -72,7 +72,10 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         body: CustomScrollView(slivers: [
-          sliverAppBar(context, "Marketplace"),
+          sliverAppBar(
+              context: context,
+              title: STitle(label: "Marketplace", center: true),
+              showSearchBar: true),
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.only(left: 15, top: 8),
