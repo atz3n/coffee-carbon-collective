@@ -24,4 +24,14 @@ describe("FarmlandRegistry mint", function() {
         const tokenOwner = await farmlandRegistry.ownerOf(1);
         expect(tokenOwner).to.equal(alice.address);
     });
+
+
+    it("Should throw while trying to mint a FARM token with none contract owner account", async () => {
+        let farmlandRegistry = await deploy<FarmlandRegistry>("FarmlandRegistry");
+        farmlandRegistry = farmlandRegistry.connect(bob);
+
+        await expect(
+            farmlandRegistry.safeMint(alice.address, 1)
+        ).to.be.revertedWith("Ownable: caller is not the owner");
+    });
 });

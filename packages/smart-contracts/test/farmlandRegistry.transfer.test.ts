@@ -30,7 +30,7 @@ describe("FarmlandRegistry transfer", function() {
     });
 
 
-    it("Should throw while trying to transfer a FARM token with no contract owner account", async () => {
+    it("Should throw while trying to transfer a FARM token with none contract owner account", async () => {
         let farmlandRegistry = await deploy<FarmlandRegistry>("FarmlandRegistry");
         await untilSettled(farmlandRegistry.safeMint(bob.address, 1));
         
