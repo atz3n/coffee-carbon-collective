@@ -1,5 +1,8 @@
 import 'package:carbon_flutter/features/index.dart';
 import 'package:flutter/material.dart';
+
+import '../../core/core_shelf.dart';
+import '../home_screen/home_screen.dart';
 import './login_widgets.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -39,8 +42,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: CButton(
                   label: "Sign In",
                   onTap: () {
-                    debugPrint("Sign In");
-                    //navigate(HomeScreen())
+                    debugPrint("Navigating to HomeScreen");
+                    navigate(context, const HomeScreen());
                   },
                   expand: true,
                   kind: CButtonKind.tertiary,

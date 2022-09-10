@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 Widget textFormWidget(String title) {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
+  return Wrap(
     children: [
       Text(
         title,
