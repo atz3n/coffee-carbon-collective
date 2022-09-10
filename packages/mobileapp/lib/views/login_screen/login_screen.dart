@@ -43,7 +43,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   label: "Sign In",
                   onTap: () {
                     debugPrint("Navigating to HomeScreen");
-                    navigate(context, const HomeScreen());
+                    navigate(
+                        context: context,
+                        page: const HomeScreen(),
+                        replace: false);
                   },
                   expand: true,
                   kind: CButtonKind.tertiary,
