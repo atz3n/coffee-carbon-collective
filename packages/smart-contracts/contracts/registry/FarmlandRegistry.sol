@@ -22,6 +22,15 @@ contract FarmlandRegistry is ERC721, ERC721Enumerable, ERC721Burnable, Ownable {
     }
 
 
+    function burn(uint256 tokenId) public {
+        _burn(tokenId);
+    }
+
+    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
+        super._burn(tokenId);
+    }
+
+
     function approve(address, uint256) public pure override(ERC721) {
         require(false, "FarmlandRegistry: Not approvable");
     }
