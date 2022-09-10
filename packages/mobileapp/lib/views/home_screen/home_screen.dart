@@ -26,6 +26,46 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  List<bool> isOpen = [false, false, false, false];
+
+  Widget expansionPanel() {
+    const content =
+        "The accordion component delivers large amounts of content in a small space through progressive disclosure. The user gets key details about the underlying content and can choose to expand that content within the constraints of the accordion.";
+
+    return ExpansionPanelList(
+        dividerColor: Colors.grey,
+        expandedHeaderPadding: const EdgeInsets.symmetric(vertical: 0),
+        expansionCallback: (panelIndex, isExpanded) => {
+              setState(() {
+                isOpen[panelIndex] = !isExpanded;
+              })
+            },
+        children: isOpen.map((e) {
+          return ExpansionPanel(
+              isExpanded: e,
+              canTapOnHeader: true,
+              headerBuilder: (ctx, opened) {
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    const Text("Title of accordion",
+                        textAlign: TextAlign.center),
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      maxRadius: 12,
+                      child:
+                          Icon(Icons.trending_up, color: HexColor("#393939")),
+                    )
+                  ],
+                );
+              },
+              body: const Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Text(content),
+              ));
+        }).toList());
+  }
+
   @override
   Widget build(BuildContext context) {
     final mediaQuerySize = MediaQuery.of(context).size;
@@ -64,18 +104,22 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           )),
-          SliverFixedExtentList(
-              itemExtent: 50.0,
-              delegate: SliverChildBuilderDelegate(
-                (BuildContext context, int index) {
-                  return Container(
-                    padding: const EdgeInsets.all(8),
-                    alignment: Alignment.center,
-                    color: Colors.lightBlue[100 * (index % 9)],
-                    child: Text('List Item $index'),
-                  );
-                },
-              ))
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 25, top: 8, right: 25),
+              child: Wrap(children: [
+                const Text("Newly launched farm tokens"),
+                expansionPanel()
+              ]),
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: Padding(
+              padding:
+                  EdgeInsets.only(left: 25, top: 12, right: 25, bottom: 30),
+              child: Text("Explore Tokens"),
+            ),
+          )
         ], shrinkWrap: true),
         bottomNavigationBar: bottomNavigationBar(_selectedIndex, _onItemTapped),
       ),
@@ -111,7 +155,6 @@ Widget trendCard(BuildContext ctx, farmInfo) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
     child: Column(
-      mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
@@ -148,6 +191,7 @@ Widget trendCard(BuildContext ctx, farmInfo) {
           ),
         ),
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(farmInfo["location"]),
             Text('@${farmInfo["username"]}')
