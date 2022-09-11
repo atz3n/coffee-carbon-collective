@@ -7,8 +7,8 @@ import { FarmlandStore } from "../src/storage/farmland/FarmlandStore";
 import { createFarmlandStore } from "../src/storage/farmland/farmlandStoreFactory";
 import { StorageType } from "../src/storage/StorageType";
 import { DummyTransport, initLogger } from "../src/utils/logger";
-import { FarmlandRegistry } from "../src/contract/interfaces/registry";
-import { CarbonCreditToken } from "../src/contract/interfaces/token";
+import { FarmlandRegistry } from "../src/contract/interfaces/contracts/registry";
+import { CarbonCreditToken } from "../src/contract/interfaces/contracts/token";
 
 
 jest.setTimeout(100 * 1000);
