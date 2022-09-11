@@ -1,12 +1,12 @@
 import { model, Schema } from "mongoose";
 import { AMongoDBStore } from "../AMongoDBStore";
-import { CoinHolder, CoinHolderType, ICoinHolderStore } from "./ICoinHolderStore";
+import { TokenHolder, TokenHolderType, ITokenHolderStore } from "./ITokenHolderStore";
 
 
-export class CoinHolderStoreMongoDB extends AMongoDBStore implements ICoinHolderStore {
+export class TokenHolderStoreMongoDB extends AMongoDBStore implements ITokenHolderStore {
     constructor(options: { mongoUrl: string }) {
         super({
-            model: model("CoinHolder", new Schema<CoinHolder>({
+            model: model("TokenHolder", new Schema<TokenHolder>({
                 type: { type: String, required: true },
                 address: { type: String, required: true },
                 amount: { type: Number, required: true }
@@ -16,12 +16,12 @@ export class CoinHolderStoreMongoDB extends AMongoDBStore implements ICoinHolder
     }
 
 
-    public async upsert(coinHolder: CoinHolder): Promise<void> {
-        await this._upsert({ address: coinHolder.address }, coinHolder);
+    public async upsert(tokenHolder: TokenHolder): Promise<void> {
+        await this._upsert({ address: tokenHolder.address }, tokenHolder);
     }
 
 
-    public async find(params: {address?: string, type?: CoinHolderType}): Promise<CoinHolder[]> {
+    public async find(params: {address?: string, type?: TokenHolderType}): Promise<TokenHolder[]> {
         return await this._find(params);
     }
 

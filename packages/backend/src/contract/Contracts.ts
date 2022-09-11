@@ -1,21 +1,21 @@
-import { CarbonCreditCoin } from "./interfaces/CarbonCreditCoin";
-import { FarmlandRegistry } from "./interfaces/FarmlandRegistry";
+import { FarmlandRegistry } from "./interfaces/registry";
+import { CarbonCreditToken } from "./interfaces/token";
 
 
 interface InitParams {
     farmlandRegistry: FarmlandRegistry;
-    carbonCreditCoins: CarbonCreditCoin;
+    carbonCreditToken: CarbonCreditToken;
 }
 
 
 export class Contracts {
     private static farmlandRegistry: FarmlandRegistry;
-    private static carbonCreditCoin: CarbonCreditCoin;
+    private static carbonCreditToken: CarbonCreditToken;
 
 
     public static init(params: InitParams) {
         this.farmlandRegistry = params.farmlandRegistry;
-        this.carbonCreditCoin = params.carbonCreditCoins;
+        this.carbonCreditToken = params.carbonCreditToken;
     }
 
 
@@ -27,10 +27,10 @@ export class Contracts {
     }
 
 
-    public static getCarbonCreditCoin(): CarbonCreditCoin {
-        if (!this.carbonCreditCoin) {
-            throw new Error("CarbonCreditCoins not found");
+    public static getCarbonCreditToken(): CarbonCreditToken {
+        if (!this.carbonCreditToken) {
+            throw new Error("CarbonCreditToken not found");
         }
-        return this.carbonCreditCoin;
+        return this.carbonCreditToken;
     }
 }

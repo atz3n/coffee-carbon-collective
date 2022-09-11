@@ -23,7 +23,7 @@ export class EnvVars {
     public static WS_RPC_RECONNECT_DELAY_SEC = 0;
     public static CATCH_UP_ALL_CONTRACT_EVENTS = false;
     public static FARMLAND_REGISTRY_CONTRACT_ADDRESS = "";
-    public static CARBON_CREDIT_COIN_CONTRACT_ADDRESS = "";
+    public static CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS = "";
 
 
     public static load(): void {
@@ -65,8 +65,8 @@ export class EnvVars {
         this.setVar("FARMLAND_REGISTRY_CONTRACT_ADDRESS", (envVar) => {
             this.FARMLAND_REGISTRY_CONTRACT_ADDRESS = String(envVar);
         });
-        this.setVar("CARBON_CREDIT_COIN_CONTRACT_ADDRESS", (envVar) => {
-            this.CARBON_CREDIT_COIN_CONTRACT_ADDRESS = String(envVar);
+        this.setVar("CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS", (envVar) => {
+            this.CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS = String(envVar);
         });
     }
 
@@ -74,12 +74,6 @@ export class EnvVars {
         if (process.env.RUN_CONTEXT === "development") {
             this.RUN_CONTEXT = RUN_CONTEXT.DEVELOPMENT;
             dotenv.config();
-        } else if (process.env.RUN_CONTEXT === "development1") {
-            this.RUN_CONTEXT = RUN_CONTEXT.DEVELOPMENT;
-            dotenv.config({ path: __dirname + "/../../dev1.env" });
-        } else if (process.env.RUN_CONTEXT === "development2") {
-            this.RUN_CONTEXT = RUN_CONTEXT.DEVELOPMENT;
-            dotenv.config({ path: __dirname + "/../../dev2.env" });
         } else if (process.env.RUN_CONTEXT === "test") {
             this.RUN_CONTEXT = RUN_CONTEXT.TEST;
             dotenv.config({ path: __dirname + "/../../test/test.env" });

@@ -1,27 +1,27 @@
 import { initContractListeners } from "../../src/contract";
 import { MintCheckerService } from "../../src/contract/common/MintCheckerService";
-import { CarbonCreditCoin } from "../../src/contract/interfaces/CarbonCreditCoin";
-import { FarmlandRegistry } from "../../src/contract/interfaces/FarmlandRegistry";
+import { FarmlandRegistry } from "../../src/contract/interfaces/registry";
+import { CarbonCreditToken } from "../../src/contract/interfaces/token";
 import { BlockchainInfoStore } from "../../src/storage/blockchain/BlockchainInfoStore";
 import { BlockchainInfoStoreInMemory } from "../../src/storage/blockchain/BlockchainInfoStoreInMemory";
-import { CoinHolderStore } from "../../src/storage/coin-holder/CoinHolderStore";
-import { CoinHolderStoreInMemory } from "../../src/storage/coin-holder/CoinHolderStoreInMemory";
+import { TokenHolderStore } from "../../src/storage/token-holder/TokenHolderStore";
+import { TokenHolderStoreInMemory } from "../../src/storage/token-holder/TokenHolderStoreInMemory";
 import { config } from "../config";
-import { COIN_HOLDER_ALICE } from "../data";
+import { TOKEN_HOLDER_ALICE } from "../data";
 import { MockContract, EventListener } from "../mocks/MockContract";
 
 
-// mock CarbonCreditCoins contract
-let coinMintListener = <EventListener> {};
-// TODO: find a more robust solution to catch the coin mint listener.
+// mock CarbonCreditTokens contract
+let tokenMintListener = <EventListener> {};
+// TODO: find a more robust solution to catch the token mint listener.
 //       With the approach below (using a counter), we have to rely on
-//       the element order of the coinEventListeners array in src/contract/index.ts
+//       the element order of the tokenEventListeners array in src/contract/index.ts
 let transferListenerCounter = 1;
 const mockContract = new MockContract({
     onCb: (event: string, listener: EventListener): void => {
         if (event === "Transfer" && transferListenerCounter === 1) {
             transferListenerCounter++;
-            coinMintListener = listener;
+            tokenMintListener = listener;
         }
     }
 });
@@ -34,24 +34,24 @@ const event = {
 
 if (!config.skipTests.includes("newProduct")) {
     const blockchainInfo =  <BlockchainInfoStoreInMemory> BlockchainInfoStore.get();
-    const coinHolderStore = <CoinHolderStoreInMemory> CoinHolderStore.get();
+    const tokenHolderStore = <TokenHolderStoreInMemory> TokenHolderStore.get();
 
     beforeEach(async () => {
         blockchainInfo.clear();
-        coinHolderStore.clear();
+        tokenHolderStore.clear();
     });
 
 
-    it("should successfully process a coin minting event", async () => {
+    it("should successfully process a token minting event", async () => {
         await initContractListeners(
             <FarmlandRegistry> <unknown> new MockContract(),
-            <CarbonCreditCoin> <unknown> mockContract
+            <CarbonCreditToken> <unknown> mockContract
         );
-        await coinMintListener(MintCheckerService.ZERO_ADDRESS, COIN_HOLDER_ALICE.address, 1000, event);
+        await tokenMintListener(MintCheckerService.ZERO_ADDRESS, TOKEN_HOLDER_ALICE.address, 1000, event);
 
-        COIN_HOLDER_ALICE.amount = 1000;
-        const coinHolder = coinHolderStore.store[0];
-        expect(coinHolder).toEqual(COIN_HOLDER_ALICE);
+        TOKEN_HOLDER_ALICE.amount = 1000;
+        const tokenHolder = tokenHolderStore.store[0];
+        expect(tokenHolder).toEqual(TOKEN_HOLDER_ALICE);
     });
 } else {
     test("dummy", () => {

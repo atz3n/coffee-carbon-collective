@@ -1,12 +1,12 @@
 import { BlockchainInfoStore } from "../../../storage/blockchain/BlockchainInfoStore";
-import { CoinHolderStore } from "../../../storage/coin-holder/CoinHolderStore";
+import { TokenHolderStore } from "../../../storage/token-holder/TokenHolderStore";
 import { BlockHeightService } from "../../common/BlockHeightService";
 import { MintCheckerService } from "../../common/MintCheckerService";
 import { ContractEventListener } from "../../ContractEventHandler";
-import { CoinMintService } from "./CoinMintService";
+import { TokenMintService } from "./TokenMintService";
 
 
-export function createCoinMintListener(): ContractEventListener {
+export function createTokenMintListener(): ContractEventListener {
     return {
         eventName: "Transfer",
         services: [
@@ -16,8 +16,8 @@ export function createCoinMintListener(): ContractEventListener {
             new MintCheckerService({
                 isMint: true
             }),
-            new CoinMintService({
-                coinHolderStore: CoinHolderStore.get()
+            new TokenMintService({
+                tokenHolderStore: TokenHolderStore.get()
             })
         ]
     };
