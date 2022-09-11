@@ -1,12 +1,12 @@
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { expect } from "chai";
 import { ethers } from "hardhat";
-import { CarbonCreditCoin } from "../typechain";
+import { CarbonCreditToken } from "../typechain";
 import { deploy } from "../utils/deployer";
 import { untilSettled } from "../utils/txHelper";
 
 
-describe("CarbonCreditCoin mint", function() {
+describe("CarbonCreditToken mint", function() {
     let alice: SignerWithAddress;
     let bob: SignerWithAddress;
 
@@ -18,10 +18,10 @@ describe("CarbonCreditCoin mint", function() {
 
 
     it("Should mint a CCC Token", async () => {
-        const carbonCreditCoin = await deploy<CarbonCreditCoin>("CarbonCreditCoin");
-        await untilSettled(carbonCreditCoin.mint(alice.address, 1));
+        const carbonCreditToken = await deploy<CarbonCreditToken>("CarbonCreditToken");
+        await untilSettled(carbonCreditToken.mint(alice.address, 1));
         
-        const balance = await carbonCreditCoin.balanceOf(alice.address);
+        const balance = await carbonCreditToken.balanceOf(alice.address);
         expect(balance.toNumber()).to.equal(1);
     });
 });
