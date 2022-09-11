@@ -24,9 +24,8 @@ describe("FarmlandRegistry burn", function() {
         await untilSettled(farmlandRegistry.safeMint(bob.address, 1));
         
         await untilSettled(farmlandRegistry.burn(1));
-        await expect(
-            farmlandRegistry.ownerOf(1)
-        ).to.be.revertedWith("ERC721: invalid token ID");
+        const balance = await farmlandRegistry.balanceOf(bob.address)
+        expect(balance.toNumber()).to.equal(0);
     });
 
     
