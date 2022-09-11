@@ -6,7 +6,7 @@ import { deploy } from "../utils/deployer";
 import { untilSettled } from "../utils/txHelper";
 
 
-describe("FarmlandRegistry mint", function() {
+describe("FarmlandRegistry tokenURI", function() {
     let alice: SignerWithAddress;
     let bob: SignerWithAddress;
 
@@ -17,21 +17,26 @@ describe("FarmlandRegistry mint", function() {
     });
 
 
-    it("Should mint a FARM token", async () => {
+    it("Should set a token URI", async () => {
+        const dummyTokenURI = "hello world";
         const farmlandRegistry = await deploy<FarmlandRegistry>("FarmlandRegistry");
-        await untilSettled(farmlandRegistry.safeMint(alice.address, 1));
+        await untilSettled(farmlandRegistry.safeMint(bob.address, 1));
         
-        const tokenOwner = await farmlandRegistry.ownerOf(1);
-        expect(tokenOwner).to.equal(alice.address);
+        await untilSettled(farmlandRegistry.setTokenURI(1, dummyTokenURI));
+        const tokenURI = await farmlandRegistry.tokenURI(1);
+
+        expect(tokenURI).to.equal(dummyTokenURI);
     });
 
-
-    it("Should throw while trying to mint a FARM token with none contract owner account", async () => {
+    
+    it("Should throw while trying to set a token URI with none contract owner account", async () => {
+        const dummyTokenURI = "hello world";
         let farmlandRegistry = await deploy<FarmlandRegistry>("FarmlandRegistry");
+        await untilSettled(farmlandRegistry.safeMint(bob.address, 1));
         farmlandRegistry = farmlandRegistry.connect(bob);
 
         await expect(
-            farmlandRegistry.safeMint(alice.address, 1)
+            farmlandRegistry.setTokenURI(1, dummyTokenURI)
         ).to.be.revertedWith("Ownable: caller is not the owner");
     });
 });
