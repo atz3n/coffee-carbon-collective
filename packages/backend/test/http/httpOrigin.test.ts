@@ -10,7 +10,7 @@ if (!config.skipTests.includes("httpOrigin")) {
 
     it("should accept requests from known origins", async () => {
         await request(server)
-            .get("/coin-holders")
+            .get("/token-holders")
             .set("Origin", EnvVars.ALLOWED_ORIGINS[0])
             .expect(200);
     });
@@ -18,7 +18,7 @@ if (!config.skipTests.includes("httpOrigin")) {
 
     it("should revert requests from unknown origins", async () => {
         await request(server)
-            .get("/coin-holders")
+            .get("/token-holders")
             .set("Origin", "http://unknown.domain")
             .expect(401);
     });

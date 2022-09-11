@@ -2,21 +2,21 @@ import { EnvVars } from "../lib/EnvVars";
 import { BlockchainInfoStore } from "../storage/blockchain/BlockchainInfoStore";
 import { ContractEventHandler } from "./ContractEventHandler";
 import { catchUpEvents } from "./eventCatchUpper";
-import { CarbonCreditCoin } from "./interfaces/CarbonCreditCoin";
-import { FarmlandRegistry } from "./interfaces/FarmlandRegistry";
-import { createCoinMintListener } from "./listeners/coin-mint/coinMint";
-import { createCoinTransferListener } from "./listeners/coin-transfer/coinTransfer";
+import { createTokenMintListener } from "./listeners/token-mint/tokenMint";
+import { createTokenTransferListener } from "./listeners/token-transfer/tokenTransfer";
 import { createFarmlandMintListener } from "./listeners/farmland-mint/farmlandMint";
+import { FarmlandRegistry } from "./interfaces/registry";
+import { CarbonCreditToken } from "./interfaces/token";
 
 
-export async function initContractListeners(farmlandRegistry: FarmlandRegistry, carbonCreditCoin: CarbonCreditCoin): Promise<void> {
+export async function initContractListeners(farmlandRegistry: FarmlandRegistry, carbonCreditToken: CarbonCreditToken): Promise<void> {
     const registryEventListeners = [
         createFarmlandMintListener()
     ];
 
-    const coinEventListeners = [
-        createCoinMintListener(),
-        createCoinTransferListener()
+    const tokenEventListeners = [
+        createTokenMintListener(),
+        createTokenTransferListener()
     ];
 
     const blockchainInfoStore = BlockchainInfoStore.get();
@@ -35,19 +35,19 @@ export async function initContractListeners(farmlandRegistry: FarmlandRegistry, 
         });
         await catchUpEvents({
             fromBlockHeight: blockchainInfo.blockHeight + 1,
-            contract: carbonCreditCoin,
-            eventSetups: coinEventListeners.map((listener) => {
+            contract: carbonCreditToken,
+            eventSetups: tokenEventListeners.map((listener) => {
                 return { eventListener: listener };
             })
         });
     }
 
     const registryEventHandler = new ContractEventHandler({ contract: farmlandRegistry });
-    const coinEventHandler = new ContractEventHandler({ contract: carbonCreditCoin });
+    const tokenEventHandler = new ContractEventHandler({ contract: carbonCreditToken });
 
     await registryEventHandler.init();
-    await coinEventHandler.init();
+    await tokenEventHandler.init();
 
     registryEventListeners.forEach(eventListener => registryEventHandler.add(eventListener));
-    coinEventListeners.forEach(eventListener => coinEventHandler.add(eventListener));
+    tokenEventListeners.forEach(eventListener => tokenEventHandler.add(eventListener));
 }

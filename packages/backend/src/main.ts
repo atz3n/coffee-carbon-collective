@@ -2,17 +2,17 @@ import { Provider } from "@ethersproject/providers";
 import { Contract } from "ethers";
 import { initContractListeners } from "./contract";
 import { Contracts } from "./contract/Contracts";
-import { CarbonCreditCoin } from "./contract/interfaces/CarbonCreditCoin";
-import CarbonCreditCoinJSON from "./contract/interfaces/CarbonCreditCoin.json";
-import { FarmlandRegistry } from "./contract/interfaces/FarmlandRegistry";
-import FarmlandRegistryJSON from "./contract/interfaces/FarmlandRegistry.json";
+import { CarbonCreditToken } from "./contract/interfaces/token";
+import CarbonCreditTokenJSON from "./contract/interfaces/token/CarbonCreditToken.json";
+import { FarmlandRegistry } from "./contract/interfaces/registry";
+import FarmlandRegistryJSON from "./contract/interfaces/registry/FarmlandRegistry.json";
 import { initHttpServer } from "./http";
 import { EnvVars, RUN_CONTEXT } from "./lib/EnvVars";
 import { RPCProvider } from "./lib/RPCProvider";
 import { BlockchainInfoStore } from "./storage/blockchain/BlockchainInfoStore";
 import { createBlockchainInfoStore } from "./storage/blockchain/blockchainInfoStoreFactory";
-import { CoinHolderStore } from "./storage/coin-holder/CoinHolderStore";
-import { createCoinHolderStore } from "./storage/coin-holder/coinHolderStoreFactory";
+import { TokenHolderStore } from "./storage/token-holder/TokenHolderStore";
+import { createTokenHolderStore } from "./storage/token-holder/tokenHolderStoreFactory";
 import { FarmlandStore } from "./storage/farmland/FarmlandStore";
 import { createFarmlandStore } from "./storage/farmland/farmlandStoreFactory";
 import { StorageType } from "./storage/StorageType";
@@ -30,7 +30,7 @@ async function main(): Promise<void> {
     logger.info("Init databases...");
     const storageType = EnvVars.MONGO_DB_URL ? StorageType.MONGO_DB : StorageType.IN_MEMORY;
     BlockchainInfoStore.init(createBlockchainInfoStore(storageType));
-    CoinHolderStore.init(createCoinHolderStore(storageType));
+    TokenHolderStore.init(createTokenHolderStore(storageType));
     FarmlandStore.init(createFarmlandStore(storageType));
 
     logger.info("Init RPC provider...");
@@ -48,14 +48,14 @@ async function main(): Promise<void> {
                 FarmlandRegistryJSON.abi,
                 provider
             ),
-            carbonCreditCoins: <CarbonCreditCoin> new Contract(
-                EnvVars.CARBON_CREDIT_COIN_CONTRACT_ADDRESS,
-                CarbonCreditCoinJSON.abi,
+            carbonCreditToken: <CarbonCreditToken> new Contract(
+                EnvVars.CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS,
+                CarbonCreditTokenJSON.abi,
                 provider
             ),
         });
         logger.info("Reinit contract listeners...");
-        await initContractListeners(Contracts.getFarmlandRegistry(), Contracts.getCarbonCreditCoin());
+        await initContractListeners(Contracts.getFarmlandRegistry(), Contracts.getCarbonCreditToken());
         logger.info("Listeners reinitialized");
     });
 
@@ -66,9 +66,9 @@ async function main(): Promise<void> {
             FarmlandRegistryJSON.abi,
             RPCProvider.provider
         ),
-        carbonCreditCoins: <CarbonCreditCoin> new Contract(
-            EnvVars.CARBON_CREDIT_COIN_CONTRACT_ADDRESS,
-            CarbonCreditCoinJSON.abi,
+        carbonCreditToken: <CarbonCreditToken> new Contract(
+            EnvVars.CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS,
+            CarbonCreditTokenJSON.abi,
             RPCProvider.provider
         ),
     });
@@ -82,7 +82,7 @@ async function main(): Promise<void> {
     });
 
     logger.info("Init contract listeners...");
-    await initContractListeners(Contracts.getFarmlandRegistry(), Contracts.getCarbonCreditCoin());
+    await initContractListeners(Contracts.getFarmlandRegistry(), Contracts.getCarbonCreditToken());
     logger.info("Listeners initialized");
 
     logger.info("Done.");

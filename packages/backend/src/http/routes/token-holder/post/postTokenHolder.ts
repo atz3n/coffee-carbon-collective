@@ -1,30 +1,30 @@
 import { NextFunction, Request, Response, Router } from "express";
 import { body } from "express-validator";
 import { Contracts } from "../../../../contract/Contracts";
-import { CoinHolderStore } from "../../../../storage/coin-holder/CoinHolderStore";
+import { TokenHolderStore } from "../../../../storage/token-holder/TokenHolderStore";
 import { INVALID_INPUT_TEXT } from "../../../constants";
 import { createRouter } from "../../../routerFactory";
-import { PostCoinHolderService } from "./PostCoinHolderService";
+import { PostTokenHolderService } from "./PostTokenHolderService";
 
 
-export function createPostCoinHoldersRouter(): Router {
+export function createPostTokenHoldersRouter(): Router {
     return createRouter({
         method: "post",
-        route: "/coin-holders",
+        route: "/token-holders",
         inputPath: "body",
         inputChecks: [
-            body("type").custom(isCoinHolderType).withMessage(INVALID_INPUT_TEXT + "type"),
+            body("type").custom(isTokenHolderType).withMessage(INVALID_INPUT_TEXT + "type"),
             body("address").isEthereumAddress().withMessage(INVALID_INPUT_TEXT + "address")
         ],
         middlewares: [ cleanseInputs],
-        service: new PostCoinHolderService({
-            coinHolderStore: CoinHolderStore.get(),
-            coinContract: Contracts.getCarbonCreditCoin()
+        service: new PostTokenHolderService({
+            tokenHolderStore: TokenHolderStore.get(),
+            tokenContract: Contracts.getCarbonCreditToken()
         })
     });
 }
 
-function isCoinHolderType(value: string): boolean {
+function isTokenHolderType(value: string): boolean {
     if (value) {
         return value === "funder" || value === "farmer";
     }

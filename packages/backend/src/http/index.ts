@@ -9,8 +9,8 @@ import { createServer, Server } from "http";
 import { EnvVars } from "../lib/EnvVars";
 import { logErrors } from "./middlewares/errorLogging";
 import { logHttp } from "./middlewares/httpLogging";
-import { createGetCoinHolderRouter } from "./routes/coin-holder/get/getCoinHolders";
-import { createPostCoinHoldersRouter } from "./routes/coin-holder/post/postCoinHolder";
+import { createGetTokenHolderRouter } from "./routes/token-holder/get/getTokenHolders";
+import { createPostTokenHoldersRouter } from "./routes/token-holder/post/postTokenHolder";
 
 
 export function initHttpServer(): Server {
@@ -27,8 +27,8 @@ export function initHttpServer(): Server {
     }));
     httpServer.use(validateOrigin(EnvVars.ALLOWED_ORIGINS));
 
-    httpServer.use(createGetCoinHolderRouter());
-    httpServer.use(createPostCoinHoldersRouter());
+    httpServer.use(createGetTokenHolderRouter());
+    httpServer.use(createPostTokenHoldersRouter());
 
     httpServer.all("*", (request, response) => {
         throw new NotFoundError();

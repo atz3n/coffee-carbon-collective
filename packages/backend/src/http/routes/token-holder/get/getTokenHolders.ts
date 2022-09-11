@@ -1,28 +1,28 @@
 import { NextFunction, Request, Response, Router } from "express";
 import { query } from "express-validator";
-import { CoinHolderStore } from "../../../../storage/coin-holder/CoinHolderStore";
+import { TokenHolderStore } from "../../../../storage/token-holder/TokenHolderStore";
 import { INVALID_INPUT_TEXT } from "../../../constants";
 import { createRouter } from "../../../routerFactory";
-import { GetCoinHoldersService } from "./GetCoinHoldersService";
+import { GetTokenHoldersService } from "./GetTokenHoldersService";
 
 
-export function createGetCoinHolderRouter(): Router {
+export function createGetTokenHolderRouter(): Router {
     return createRouter({
         method: "get",
-        route: "/coin-holders",
+        route: "/token-holders",
         inputPath: "query",
         inputChecks: [
-            query("type").optional().custom(isCoinHolderType).withMessage(INVALID_INPUT_TEXT + "type"),
+            query("type").optional().custom(isTokenHolderType).withMessage(INVALID_INPUT_TEXT + "type"),
             query("address").optional().isEthereumAddress().withMessage(INVALID_INPUT_TEXT + "address")
         ],
         middlewares: [ cleanseInputs ],
-        service: new GetCoinHoldersService({
-            coinHolderStore: CoinHolderStore.get()
+        service: new GetTokenHoldersService({
+            tokenHolderStore: TokenHolderStore.get()
         })
     });
 }
 
-function isCoinHolderType(value: string): boolean {
+function isTokenHolderType(value: string): boolean {
     if (value) {
         return value === "funder" || value === "farmer";
     }
