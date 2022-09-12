@@ -1,6 +1,6 @@
-# Local Dibichain Demo
+# Local CCC Demo
 
-This folder contains the configuration needed to run the CCC demo locally on your machine. The only requirement is that you have [Docker](https://www.docker.com) and [Docker Compose](https://docs.docker.com/compose/install/) installed. You also need to be able to run bash scripts. If your operating system is based on Unix, you can get started right away. If it's Windows, try [WSL](https://docs.microsoft.com/en-gb/windows/wsl/install) or [Cygwin](https://www.cygwin.com).
+This folder contains the configuration needed to run the CCC demo locally on your machine. You need [Docker](https://www.docker.com), [Docker Compose](https://docs.docker.com/compose/install/), [flutter](https://formulae.brew.sh/cask/flutter) and the [iOS Simulator](https://formulae.brew.sh/cask/flutter) installed. You also need to be able to run bash scripts. If your operating system is based on Unix, you can get started right away. If it's Windows, try [WSL](https://docs.microsoft.com/en-gb/windows/wsl/install) or [Cygwin](https://www.cygwin.com).
 
 
 ## TL; DR;

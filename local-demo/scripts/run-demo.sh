@@ -78,4 +78,12 @@ echo "[INFO] Starting backend..."
 cd ${HERE}/../config
 ${SUDO} docker-compose -p ccc-backend -f docker-compose-local-backend.yml up -d
 
+echo "[INFO] Starting phone simulator..."
+cd ${HERE}
+open -a Simulator
+
+echo "[INFO] Starting mobile app..."
+cd ${HERE}/../../packages/mobileapp
+flutter run
+
 echo "[INFO] Done."

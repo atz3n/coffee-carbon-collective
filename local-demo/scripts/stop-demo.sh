@@ -23,6 +23,9 @@ if [ $(uname) == Linux ]; then
     SUDO="sudo"
 fi
 
+echo "[INFO] Stopping and removing mobile simulator..."
+killall Simulator
+ 
 echo "[INFO] Stopping and removing docker containers..."
 cd ${HERE}/../config
 ${SUDO} docker-compose -p ccc-backend -f docker-compose-local-backend.yml down
