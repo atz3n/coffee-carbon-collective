@@ -2,7 +2,6 @@ import 'package:carbon_flutter/features/index.dart';
 import 'package:flutter/material.dart';
 import 'package:mobileapp/core/core_shelf.dart';
 
-import '../global_widgets/sliver_app_bar.dart';
 import '../global_widgets/global_widgets_shelf.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,17 +12,18 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0;
   List tags = ["Colombia", "Brasilien", "Turkey", "Germany"];
   List<Object> farmInfo = [
     {"location": "Farm Location", "username": "User"},
     {"location": "Farm Location", "username": "User"}
   ];
 
+  int _selectedIndex = 0;
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+    navigateWithIndex(context, index, true);
   }
 
   List<bool> isOpen = [false, false, false, false];
@@ -31,7 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget expansionPanel() {
     const content =
         "The accordion component delivers large amounts of content in a small space through progressive disclosure. The user gets key details about the underlying content and can choose to expand that content within the constraints of the accordion.";
-
     return ExpansionPanelList(
         dividerColor: Colors.grey,
         expandedHeaderPadding: const EdgeInsets.symmetric(vertical: 0),
