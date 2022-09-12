@@ -16,14 +16,14 @@ DEPLOY_OPTION="registry"
 # PARAMETER PARSING
 ###################################################################################################
 
-while getopts "h?u:c:s:f:" opt; do
+while getopts "h?u:c:s:f:o:" opt; do
     case "$opt" in
         h)
             echo "Parameter: [<value> / (flag)]"
             echo "-c <contract address>"
             echo "-s <deployer secret>"
             echo "-u <rpc url>"
-            echo "-p <deploy command option>"
+            echo "-o <deploy command option>"
             exit 0
             ;;
         c)
