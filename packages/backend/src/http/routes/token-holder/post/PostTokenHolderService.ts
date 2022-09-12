@@ -1,5 +1,5 @@
 import { BadRequestError } from "@atz3n/express-utils";
-import { CarbonCreditToken } from "../../../../contract/interfaces/token";
+import { CarbonCreditToken } from "../../../../contract/interfaces/contracts/token";
 import { TokenHolderType, ITokenHolderStore } from "../../../../storage/token-holder/ITokenHolderStore";
 import { RouteService } from "../../../routerFactory";
 

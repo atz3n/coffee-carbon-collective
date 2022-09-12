@@ -15,8 +15,13 @@ if [ -z ${DEPLOYER_SECRET} ]; then
     exit 1
 fi
 
+if [ -z ${DEPLOY_OPTION} ]; then
+    echo "Error: DEPLOY_OPTION is missing"
+    exit 1
+fi
+
 echo "Deploying to ${RPC_URL}..."
 cd /usr/app/scripts
-./deploy.sh -u ${RPC_URL} -c ${CONTRACT_ADDRESS} -s ${DEPLOYER_SECRET}
+./deploy.sh -u ${RPC_URL} -c ${CONTRACT_ADDRESS} -s ${DEPLOYER_SECRET} -o ${DEPLOY_OPTION}
 
 exec "$@"

@@ -1,5 +1,5 @@
-import { FarmlandRegistry } from "./interfaces/registry";
-import { CarbonCreditToken } from "./interfaces/token";
+import { FarmlandRegistry } from "./interfaces/contracts/registry";
+import { CarbonCreditToken } from "./interfaces/contracts/token";
 
 
 interface InitParams {

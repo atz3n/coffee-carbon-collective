@@ -1,10 +1,10 @@
-import { CarbonCreditCoin } from '../typechain';
+import { CarbonCreditToken } from '../typechain';
 import { deploy } from '../utils/deployer';
 
 
 async function main(): Promise<void> {
-    const carbonCreditCoin = await deploy<CarbonCreditCoin>("CarbonCreditCoin");
-    console.log("CarbonCreditCoin deployed to:", carbonCreditCoin.address);
+    const carbonCreditToken = await deploy<CarbonCreditToken>("CarbonCreditToken");
+    console.log("CarbonCreditToken deployed to:", carbonCreditToken.address);
 }
 
 main()

@@ -5,8 +5,8 @@ import { catchUpEvents } from "./eventCatchUpper";
 import { createTokenMintListener } from "./listeners/token-mint/tokenMint";
 import { createTokenTransferListener } from "./listeners/token-transfer/tokenTransfer";
 import { createFarmlandMintListener } from "./listeners/farmland-mint/farmlandMint";
-import { FarmlandRegistry } from "./interfaces/registry";
-import { CarbonCreditToken } from "./interfaces/token";
+import { FarmlandRegistry } from "./interfaces/contracts/registry";
+import { CarbonCreditToken } from "./interfaces/contracts/token";
 
 
 export async function initContractListeners(farmlandRegistry: FarmlandRegistry, carbonCreditToken: CarbonCreditToken): Promise<void> {

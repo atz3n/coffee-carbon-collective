@@ -31,6 +31,7 @@ COPY docker/entrypoint.sh .
 COPY scripts ./scripts
 
 # Copy source files
+COPY utils ./utils
 COPY tools ./tools
 COPY contracts ./contracts
 

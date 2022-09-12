@@ -1,7 +1,7 @@
 import { initContractListeners } from "../../src/contract";
 import { MintCheckerService } from "../../src/contract/common/MintCheckerService";
-import { FarmlandRegistry } from "../../src/contract/interfaces/registry";
-import { CarbonCreditToken } from "../../src/contract/interfaces/token";
+import { FarmlandRegistry } from "../../src/contract/interfaces/contracts/registry";
+import { CarbonCreditToken } from "../../src/contract/interfaces/contracts/token";
 import { BlockchainInfoStore } from "../../src/storage/blockchain/BlockchainInfoStore";
 import { BlockchainInfoStoreInMemory } from "../../src/storage/blockchain/BlockchainInfoStoreInMemory";
 import { TokenHolderStore } from "../../src/storage/token-holder/TokenHolderStore";
