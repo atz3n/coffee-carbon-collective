@@ -8,6 +8,7 @@ class UserApiService {
   Future<void> loginUser(String email, String password) async {
     try {
       var body = {'email': email, 'password': password};
+      // ignore: unused_local_variable
       var response = await _dio.post(
         '$_endpoint/login',
         data: body,

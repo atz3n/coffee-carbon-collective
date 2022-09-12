@@ -1,3 +1,4 @@
+import 'package:carbon_flutter/features/index.dart';
 import 'package:flutter/material.dart';
 import 'package:sliver_tools/sliver_tools.dart';
 
@@ -29,6 +30,103 @@ class _ProfileScreenState extends State<ProfileScreen> {
     navigateWithIndex(context, index, true);
   }
 
+  @override
+  Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+    String username = "John Farmer";
+    String avatarImage = "https://www.w3schools.com/howto/img_avatar.png";
+    return SafeArea(
+      child: Scaffold(
+        body: CustomScrollView(slivers: [
+          SliverStack(
+            children: [
+              sliverAppBar(
+                context: context,
+                actions: const [
+                  Padding(
+                    padding: EdgeInsets.all(12.0),
+                    child: Icon(CIcons.userProfile, size: 40),
+                  )
+                ],
+                title: STitle(
+                  label: "Hi, JohnFarmer",
+                  subLabel: "Welcome",
+                  center: false,
+                ),
+              ),
+              SliverPositioned.fill(
+                right: 110,
+                left: 110,
+                bottom: -screenSize.height * 0.09,
+                top: screenSize.height * 0.09,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    CircleAvatar(
+                      radius: 70,
+                      backgroundImage: NetworkImage(avatarImage),
+                    ),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        decoration: const BoxDecoration(
+                            shape: BoxShape.circle, color: Colors.white),
+                        child: const Icon(
+                          Icons.edit_outlined,
+                          size: 30,
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Container(
+                        decoration: const BoxDecoration(
+                            shape: BoxShape.circle, color: Colors.white),
+                        child: const Icon(
+                          Icons.edit_outlined,
+                          size: 30,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          SliverToBoxAdapter(
+            child: Column(
+              children: [
+                Container(
+                  height: screenSize.height * 0.18,
+                  color: HexColor("#D9D9D9"),
+                ),
+                Container(
+                  height: screenSize.height * 0.07,
+                  width: screenSize.width,
+                  color: HexColor("#F4F4F4"),
+                  child: Center(
+                    child: Text(
+                      username,
+                      textAlign: TextAlign.center,
+                      textScaleFactor: 1.2,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+              child: expansionPanel(panelList),
+            ),
+          )
+        ]),
+        bottomNavigationBar: bottomNavigationBar(_selectedIndex, _onItemTapped),
+      ),
+    );
+  }
+
   List<IExpansionPanel> panelList = List.generate(
       2,
       (i) => IExpansionPanel(
@@ -43,14 +141,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
             alignment: Alignment.centerLeft,
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
-              child: OutlinedButton(
-                onPressed: () {},
-                style: OutlinedButton.styleFrom(
-                    side: const BorderSide(color: Colors.black)),
-                child: const Text(
-                  "Edit",
-                  style: TextStyle(color: Colors.black),
-                ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  tokensTable(35, 15, 20),
+                  const SizedBox(height: 10),
+                  OutlinedButton(
+                      onPressed: () {},
+                      style: OutlinedButton.styleFrom(
+                          side: const BorderSide(color: Colors.black)),
+                      child: const Text(
+                        "Edit",
+                        style: TextStyle(color: Colors.black),
+                      )),
+                ],
               ),
             ),
           )));
@@ -79,69 +183,47 @@ class _ProfileScreenState extends State<ProfileScreen> {
           );
         }).toList());
   }
+}
 
-  @override
-  Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
-    return SafeArea(
-      child: Scaffold(
-        body: CustomScrollView(slivers: [
-          SliverStack(
-            children: [
-              sliverAppBar(
-                context: context,
-                title: STitle(
-                  label: "Hi, JohnFarmer",
-                  subLabel: "Welcome",
-                  center: false,
-                ),
+Table tokensTable(int total, int sold, int available) {
+  return Table(
+    border: TableBorder.all(width: 0.1),
+    children: [
+      TableRow(children: [
+        TableCell(
+          child: SizedBox(
+            height: 50,
+            child: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [const Text('Total'), Text('$total Tokens')],
               ),
-              SliverPositioned.fill(
-                bottom: -screenSize.height * 0.09,
-                top: screenSize.height * 0.09,
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    CircleAvatar(
-                      radius: 70,
-                      backgroundColor: HexColor("#7A7A7A"),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          SliverToBoxAdapter(
-            child: Column(
-              children: [
-                Container(
-                  height: screenSize.height * 0.18,
-                  color: HexColor("#D9D9D9"),
-                ),
-                Container(
-                  height: screenSize.height * 0.07,
-                  width: screenSize.width,
-                  color: HexColor("#F4F4F4"),
-                  child: const Center(
-                    child: Text(
-                      "John Farmer",
-                      textAlign: TextAlign.center,
-                      textScaleFactor: 1.2,
-                    ),
-                  ),
-                ),
-              ],
             ),
           ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: expansionPanel(panelList),
+        ),
+        TableCell(
+          child: SizedBox(
+            height: 50,
+            child: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [const Text('Sold'), Text('$sold Tokens')],
+              ),
             ),
-          )
-        ]),
-        bottomNavigationBar: bottomNavigationBar(_selectedIndex, _onItemTapped),
-      ),
-    );
-  }
+          ),
+        ),
+        TableCell(
+          child: SizedBox(
+            height: 50,
+            child: Center(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [const Text('Available'), Text('$available Tokens')],
+              ),
+            ),
+          ),
+        ),
+      ])
+    ],
+  );
 }

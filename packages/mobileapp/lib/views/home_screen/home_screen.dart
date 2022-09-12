@@ -2,7 +2,6 @@ import 'package:carbon_flutter/features/index.dart';
 import 'package:flutter/material.dart';
 import 'package:mobileapp/core/core_shelf.dart';
 
-import '../global_widgets/sliver_app_bar.dart';
 import '../global_widgets/global_widgets_shelf.dart';
 
 class HomeScreen extends StatefulWidget {
