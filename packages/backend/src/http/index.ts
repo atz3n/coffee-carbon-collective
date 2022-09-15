@@ -9,8 +9,8 @@ import { createServer, Server } from "http";
 import { EnvVars } from "../lib/EnvVars";
 import { logErrors } from "./middlewares/errorLogging";
 import { logHttp } from "./middlewares/httpLogging";
-import { createGetTokenHolderRouter } from "./routes/token-holder/get/getTokenHolders";
-import { createPostTokenHoldersRouter } from "./routes/token-holder/post/postTokenHolder";
+import { createGetFarmersRouter } from "./routes/farmers/get/getFarmers";
+import { createPostFarmersRouter } from "./routes/farmers/post/postFarmers";
 
 
 export function initHttpServer(): Server {
@@ -27,8 +27,8 @@ export function initHttpServer(): Server {
     }));
     httpServer.use(validateOrigin(EnvVars.ALLOWED_ORIGINS));
 
-    httpServer.use(createGetTokenHolderRouter());
-    httpServer.use(createPostTokenHoldersRouter());
+    httpServer.use(createPostFarmersRouter());
+    httpServer.use(createGetFarmersRouter());
 
     httpServer.all("*", (request, response) => {
         throw new NotFoundError();

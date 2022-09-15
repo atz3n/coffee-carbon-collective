@@ -17,6 +17,8 @@ import { FarmlandStore } from "./storage/farmland/FarmlandStore";
 import { createFarmlandStore } from "./storage/farmland/farmlandStoreFactory";
 import { StorageType } from "./storage/StorageType";
 import { ConsoleTransport, initLogger, logger } from "./utils/logger";
+import { FarmerStore } from "./storage/farmer/FarmerStore";
+import { createFarmerStore } from "./storage/farmer/farmerStoreFactory";
 
 
 async function main(): Promise<void> {
@@ -32,6 +34,7 @@ async function main(): Promise<void> {
     BlockchainInfoStore.init(createBlockchainInfoStore(storageType));
     TokenHolderStore.init(createTokenHolderStore(storageType));
     FarmlandStore.init(createFarmlandStore(storageType));
+    FarmerStore.init(createFarmerStore(storageType));
 
     logger.info("Init RPC provider...");
     RPCProvider.setWSConfig({
