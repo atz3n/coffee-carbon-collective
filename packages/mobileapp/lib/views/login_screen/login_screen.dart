@@ -23,12 +23,34 @@ class _LoginScreenState extends State<LoginScreen> {
         resizeToAvoidBottomInset: false,
         body: Padding(
           padding:
-              const EdgeInsets.only(left: 15, right: 15, top: 165, bottom: 15),
+              const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 15),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                      margin: const EdgeInsets.symmetric(vertical: 50),
+                      padding: const EdgeInsets.only(right: 80),
+                      decoration: BoxDecoration(border: Border.all()),
+                      child: TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          "Back",
+                          style: TextStyle(color: Colors.black),
+                          textAlign: TextAlign.start,
+                        ),
+                      )),
+                  CButton(
+                    label: "Sign Up",
+                    onTap: () {},
+                    kind: CButtonKind.tertiary,
+                  )
+                ],
+              ),
               textFormWidget("Username"),
               SizedBox(height: screenSize.height * 0.02),
               textFormWidget("Password"),
