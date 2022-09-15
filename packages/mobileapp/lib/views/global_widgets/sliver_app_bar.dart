@@ -15,7 +15,8 @@ SliverAppBar sliverAppBar(
     required STitle title,
     List<Widget>? actions,
     bool? leadingBack,
-    bool? showSearchBar}) {
+    bool? showSearchBar,
+    String? username}) {
   final screenSize = MediaQuery.of(context).size;
   return SliverAppBar(
       leadingWidth: 110,
@@ -72,7 +73,26 @@ SliverAppBar sliverAppBar(
                 ),
               ),
             )
-          : null);
+          : username != null
+              ? PreferredSize(
+                  preferredSize: const Size.fromHeight(110),
+                  child: Container(
+                    decoration: const BoxDecoration(
+                        border: Border.symmetric(
+                            horizontal: BorderSide(color: Colors.white))),
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "@$username",
+                          style: const TextStyle(color: Colors.white),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              : null);
 }
 
 Widget searchTextField(String hintText) {

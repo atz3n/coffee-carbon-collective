@@ -26,11 +26,11 @@ class _NftFarmScreenState extends State<NftFarmScreen> {
       child: Scaffold(
         body: CustomScrollView(slivers: [
           sliverAppBar(
-            context: context,
-            title: STitle(label: "NFTLand", center: true),
-            showSearchBar: false,
-            leadingBack: true,
-          )
+              context: context,
+              title: STitle(label: "NFTLand", center: true),
+              showSearchBar: false,
+              leadingBack: true,
+              username: "JohnFarmer")
         ]),
         bottomNavigationBar: bottomNavigationBar(_selectedIndex, _onItemTapped),
       ),
