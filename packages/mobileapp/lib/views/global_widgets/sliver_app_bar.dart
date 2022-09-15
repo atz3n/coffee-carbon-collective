@@ -14,9 +14,28 @@ SliverAppBar sliverAppBar(
     {required BuildContext context,
     required STitle title,
     List<Widget>? actions,
+    bool? leadingBack,
     bool? showSearchBar}) {
   final screenSize = MediaQuery.of(context).size;
   return SliverAppBar(
+      leadingWidth: 110,
+      leading: leadingBack == true
+          ? Container(
+              alignment: Alignment.centerLeft,
+              margin: const EdgeInsets.symmetric(vertical: 5),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white),
+                color: Colors.black,
+              ),
+              child: TextButton(
+                onPressed: () => navigateWithIndex(context, 0, true),
+                child: const Text(
+                  "Back",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            )
+          : null,
       backgroundColor: HexColor("#060606"),
       automaticallyImplyLeading: false,
       title: Column(
