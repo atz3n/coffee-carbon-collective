@@ -10,6 +10,7 @@ import { EnvVars } from "../lib/EnvVars";
 import { logErrors } from "./middlewares/errorLogging";
 import { logHttp } from "./middlewares/httpLogging";
 import { createGetFarmersRouter } from "./routes/farmers/get/getFarmers";
+import { createPatchFarmersRouter } from "./routes/farmers/patch/patchFarmers";
 import { createPostFarmersRouter } from "./routes/farmers/post/postFarmers";
 
 
@@ -29,6 +30,7 @@ export function initHttpServer(): Server {
 
     httpServer.use(createPostFarmersRouter());
     httpServer.use(createGetFarmersRouter());
+    httpServer.use(createPatchFarmersRouter());
 
     httpServer.all("*", (request, response) => {
         throw new NotFoundError();
