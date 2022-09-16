@@ -8,6 +8,15 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 
 contract FarmlandRegistry is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
+    /**
+     * @dev   Emitted when a token URI is updated
+     * @param tokenId - the ID of the updated token
+     * @param setter - the account that updated the token URI
+     * @param uri - the new token URI
+     */
+    event TokenURIUpdate(uint256 indexed tokenId, address indexed setter, string uri);
+
+
     constructor() ERC721("FarmlandRegistry", "FARM") {}
 
 
@@ -60,7 +69,8 @@ contract FarmlandRegistry is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable
     }
 
 
-    function setTokenURI(uint256 tokenId, string memory _tokenURI) public onlyOwner {
-        _setTokenURI(tokenId, _tokenURI);
+    function setTokenURI(uint256 tokenId, string memory uri) public onlyOwner {
+        _setTokenURI(tokenId, uri);
+        emit TokenURIUpdate(tokenId, msg.sender, uri);
     }
 }

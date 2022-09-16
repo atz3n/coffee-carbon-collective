@@ -39,4 +39,15 @@ describe("FarmlandRegistry tokenURI", function() {
             farmlandRegistry.setTokenURI(1, dummyTokenURI)
         ).to.be.revertedWith("Ownable: caller is not the owner");
     });
+
+
+    it("Should emit an event while setting the tokenURI", async () => {
+        const dummyTokenURI = "hello world";
+        let farmlandRegistry = await deploy<FarmlandRegistry>("FarmlandRegistry");
+
+        await untilSettled(farmlandRegistry.safeMint(alice.address, 1));
+        await expect(
+            farmlandRegistry.setTokenURI(1, dummyTokenURI)
+        ).to.emit(farmlandRegistry, 'TokenURIUpdate').withArgs(1, alice.address, dummyTokenURI);
+    });
 });
