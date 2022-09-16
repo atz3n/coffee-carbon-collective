@@ -144,7 +144,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  tokensTable(35, 15, 20),
+                  tokensTable(total: 35, sold: 15, available: 20),
                   const SizedBox(height: 10),
                   OutlinedButton(
                       onPressed: () {},
@@ -185,45 +185,83 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 }
 
-Table tokensTable(int total, int sold, int available) {
-  return Table(
-    border: TableBorder.all(width: 0.1),
-    children: [
-      TableRow(children: [
-        TableCell(
-          child: SizedBox(
-            height: 50,
-            child: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [const Text('Total'), Text('$total Tokens')],
+Widget tokensTable(
+    {required int total,
+    required int sold,
+    required int available,
+    String? token}) {
+  String tokenName = "";
+  if (token != null) tokenName = token;
+  return ElevatedButton(
+    onPressed: () {},
+    style: ElevatedButton.styleFrom(
+        elevation: token == null ? 0 : 5,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        textStyle: const TextStyle(fontWeight: FontWeight.w300)),
+    child: Table(
+      border: TableBorder.all(width: 0.1),
+      children: [
+        TableRow(children: [
+          TableCell(
+            child: SizedBox(
+              height: 70,
+              child: Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Total $tokenName',
+                    ),
+                    Text(
+                      '$total Tokens',
+                    )
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-        TableCell(
-          child: SizedBox(
-            height: 50,
-            child: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [const Text('Sold'), Text('$sold Tokens')],
+          TableCell(
+            child: SizedBox(
+              height: 70,
+              child: Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Sold $tokenName',
+                    ),
+                    Text(
+                      '$sold Tokens',
+                    )
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-        TableCell(
-          child: SizedBox(
-            height: 50,
-            child: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [const Text('Available'), Text('$available Tokens')],
+          TableCell(
+            child: SizedBox(
+              height: 70,
+              child: Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Available $tokenName',
+                    ),
+                    Text(
+                      '$available Tokens',
+                    )
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-      ])
-    ],
+        ])
+      ],
+    ),
   );
 }

@@ -33,17 +33,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
-                      margin: const EdgeInsets.symmetric(vertical: 50),
-                      padding: const EdgeInsets.only(right: 80),
-                      decoration: BoxDecoration(border: Border.all()),
-                      child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Back",
-                          style: TextStyle(color: Colors.black),
-                          textAlign: TextAlign.start,
-                        ),
-                      )),
+                    margin: const EdgeInsets.symmetric(vertical: 50),
+                    padding: const EdgeInsets.only(right: 80),
+                    decoration: BoxDecoration(border: Border.all()),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "Back",
+                        style: TextStyle(color: Colors.black),
+                        textAlign: TextAlign.start,
+                      ),
+                    ),
+                  ),
                   CButton(
                     label: "Sign Up",
                     onTap: () {},

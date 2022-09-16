@@ -14,9 +14,29 @@ SliverAppBar sliverAppBar(
     {required BuildContext context,
     required STitle title,
     List<Widget>? actions,
-    bool? showSearchBar}) {
+    bool? leadingBack,
+    bool? showSearchBar,
+    String? username}) {
   final screenSize = MediaQuery.of(context).size;
   return SliverAppBar(
+      leadingWidth: 110,
+      leading: leadingBack == true
+          ? Container(
+              alignment: Alignment.centerLeft,
+              margin: const EdgeInsets.symmetric(vertical: 5),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white),
+                color: Colors.black,
+              ),
+              child: TextButton(
+                onPressed: () => navigateWithIndex(context, 0, true),
+                child: const Text(
+                  "Back",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            )
+          : null,
       backgroundColor: HexColor("#060606"),
       automaticallyImplyLeading: false,
       title: Column(
@@ -53,7 +73,26 @@ SliverAppBar sliverAppBar(
                 ),
               ),
             )
-          : null);
+          : username != null
+              ? PreferredSize(
+                  preferredSize: const Size.fromHeight(110),
+                  child: Container(
+                    decoration: const BoxDecoration(
+                        border: Border.symmetric(
+                            horizontal: BorderSide(color: Colors.white))),
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "@$username",
+                          style: const TextStyle(color: Colors.white),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              : null);
 }
 
 Widget searchTextField(String hintText) {
