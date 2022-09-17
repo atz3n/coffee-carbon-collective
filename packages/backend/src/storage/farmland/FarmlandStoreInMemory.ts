@@ -1,5 +1,5 @@
 import { AInMemoryStore } from "../AInMemoryStore";
-import { Farmland, IFarmlandStore } from "./IFarmlandStore";
+import { DeleteParams, Farmland, FindParams, IFarmlandStore } from "./IFarmlandStore";
 
 
 export class FarmlandStoreInMemory extends AInMemoryStore implements IFarmlandStore {
@@ -11,12 +11,12 @@ export class FarmlandStoreInMemory extends AInMemoryStore implements IFarmlandSt
     }
 
 
-    public async find(params: {tokenId?: number}): Promise<Farmland[]> {
+    public async find(params: FindParams): Promise<Farmland[]> {
         return this._find(params);
     }
 
 
-    public async delete(params: { tokenId?: number; }): Promise<void> {
+    public async delete(params: DeleteParams): Promise<void> {
         this._delete(params);
     }
 }

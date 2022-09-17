@@ -12,6 +12,7 @@ import { logHttp } from "./middlewares/httpLogging";
 import { createGetFarmersRouter } from "./routes/farmers/get/getFarmers";
 import { createPatchFarmersRouter } from "./routes/farmers/patch/patchFarmers";
 import { createPostFarmersRouter } from "./routes/farmers/post/postFarmers";
+import { createPostFarmlandRouter } from "./routes/farmlands/post/postFarmlands";
 
 
 export function initHttpServer(): Server {
@@ -31,6 +32,7 @@ export function initHttpServer(): Server {
     httpServer.use(createPostFarmersRouter());
     httpServer.use(createGetFarmersRouter());
     httpServer.use(createPatchFarmersRouter());
+    httpServer.use(createPostFarmlandRouter());
 
     httpServer.all("*", (request, response) => {
         throw new NotFoundError();

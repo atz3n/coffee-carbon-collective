@@ -4,23 +4,18 @@ import { ContractEventService } from "../../ContractEventHandler";
 import { Event } from "ethers";
 
 
-interface FarmlandMintServiceOptions {
+interface Options {
     farmlandStore: IFarmlandStore;
 }
 
 
 export class FarmlandMintService implements ContractEventService {
-    private readonly farmlandStore: IFarmlandStore;
+    constructor(private readonly options: Options) {}
 
 
-    constructor(options: FarmlandMintServiceOptions) {
-        this.farmlandStore = options.farmlandStore;
-    }
-
-
-    async run(inputs: unknown[]): Promise<void> {
+    public async run(inputs: unknown[]): Promise<void> {
         const to = <string> inputs[1];
-        const tokenId = <number> inputs[2];
+        const tokenId = <string> "" + inputs[2];
         const event = <Event> inputs[3];
 
         logger.event("New farmland registered -> tokenId: " + tokenId + ", block: " + event.blockNumber + ", owner: " + to,
@@ -28,7 +23,7 @@ export class FarmlandMintService implements ContractEventService {
         );
 
         try {
-            await this.farmlandStore.upsert({
+            await this.options.farmlandStore.upsert({
                 owner: to,
                 tokenId
             });

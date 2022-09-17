@@ -24,6 +24,11 @@ export class EnvVars {
     public static CATCH_UP_ALL_CONTRACT_EVENTS = false;
     public static FARMLAND_REGISTRY_CONTRACT_ADDRESS = "";
     public static CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS = "";
+    public static CONTRACTS_OWNER_SECRET = "";
+    public static NFT_STORAGE_TOKEN = "";
+    public static IPFS_RETRIEVAL_TRIES = 0;
+    public static IPFS_RETRIEVAL_TRY_DELAY = 0;
+    public static IPFS_GATEWAY_URLS: string[] = [];
 
 
     public static load(): void {
@@ -34,6 +39,7 @@ export class EnvVars {
 
         this.set_RUN_CONTEXT();
         this.set_ALLOWED_ORIGINS();
+        this.set_IPFS_GATEWAY_URLS();
 
         this.setVar("MONGO_DB_URL", (envVar) => {
             this.MONGO_DB_URL = String(envVar);
@@ -68,6 +74,18 @@ export class EnvVars {
         this.setVar("CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS", (envVar) => {
             this.CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS = String(envVar);
         });
+        this.setVar("CONTRACTS_OWNER_SECRET", (envVar) => {
+            this.CONTRACTS_OWNER_SECRET = String(envVar);
+        });
+        this.setVar("NFT_STORAGE_TOKEN", (envVar) => {
+            this.NFT_STORAGE_TOKEN = String(envVar);
+        });
+        this.setVar("IPFS_RETRIEVAL_TRIES", (envVar) => {
+            this.IPFS_RETRIEVAL_TRIES = Number(envVar);
+        }, 5);
+        this.setVar("IPFS_RETRIEVAL_TRY_DELAY", (envVar) => {
+            this.IPFS_RETRIEVAL_TRY_DELAY = Number(envVar);
+        }, 60);
     }
 
     private static set_RUN_CONTEXT(): void {
@@ -88,6 +106,13 @@ export class EnvVars {
         } else {
             this.ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS.split(",").map(origin => origin.trim());
         }
+    }
+
+    private static set_IPFS_GATEWAY_URLS(): void {
+        if (!process.env.IPFS_GATEWAY_URLS) {
+            throw new Error("IPFS_GATEWAY_URLS must be defined");
+        }
+        this.IPFS_GATEWAY_URLS = process.env.IPFS_GATEWAY_URLS.split(",").map(url => url.trim());
     }
 
     private static setVar(envVarName: string, cb: (variable: unknown) => void, defaultVar?: unknown): void {

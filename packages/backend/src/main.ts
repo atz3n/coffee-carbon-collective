@@ -1,24 +1,24 @@
 import { Provider } from "@ethersproject/providers";
-import { Contract } from "ethers";
+import { Contract, Wallet } from "ethers";
 import { initContractListeners } from "./contract";
 import { Contracts } from "./contract/Contracts";
-import { CarbonCreditToken } from "./contract/interfaces/contracts/token";
-import CarbonCreditTokenJSON from "./contract/interfaces/contracts/token/CarbonCreditToken.json";
 import { FarmlandRegistry } from "./contract/interfaces/contracts/registry";
 import FarmlandRegistryJSON from "./contract/interfaces/contracts/registry/FarmlandRegistry.json";
+import { CarbonCreditToken } from "./contract/interfaces/contracts/token";
+import CarbonCreditTokenJSON from "./contract/interfaces/contracts/token/CarbonCreditToken.json";
 import { initHttpServer } from "./http";
 import { EnvVars, RUN_CONTEXT } from "./lib/EnvVars";
 import { RPCProvider } from "./lib/RPCProvider";
 import { BlockchainInfoStore } from "./storage/blockchain/BlockchainInfoStore";
 import { createBlockchainInfoStore } from "./storage/blockchain/blockchainInfoStoreFactory";
-import { TokenHolderStore } from "./storage/token-holder/TokenHolderStore";
-import { createTokenHolderStore } from "./storage/token-holder/tokenHolderStoreFactory";
+import { FarmerStore } from "./storage/farmer/FarmerStore";
+import { createFarmerStore } from "./storage/farmer/farmerStoreFactory";
 import { FarmlandStore } from "./storage/farmland/FarmlandStore";
 import { createFarmlandStore } from "./storage/farmland/farmlandStoreFactory";
 import { StorageType } from "./storage/StorageType";
+import { TokenHolderStore } from "./storage/token-holder/TokenHolderStore";
+import { createTokenHolderStore } from "./storage/token-holder/tokenHolderStoreFactory";
 import { ConsoleTransport, initLogger, logger } from "./utils/logger";
-import { FarmerStore } from "./storage/farmer/FarmerStore";
-import { createFarmerStore } from "./storage/farmer/farmerStoreFactory";
 
 
 async function main(): Promise<void> {
@@ -45,36 +45,15 @@ async function main(): Promise<void> {
     });
     RPCProvider.init(EnvVars.RPC_URL, async (provider: Provider) => {
         logger.info("Reinit contracts...");
-        Contracts.init({
-            farmlandRegistry: <FarmlandRegistry> new Contract(
-                EnvVars.FARMLAND_REGISTRY_CONTRACT_ADDRESS,
-                FarmlandRegistryJSON.abi,
-                provider
-            ),
-            carbonCreditToken: <CarbonCreditToken> new Contract(
-                EnvVars.CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS,
-                CarbonCreditTokenJSON.abi,
-                provider
-            ),
-        });
+        initContracts(provider);
+
         logger.info("Reinit contract listeners...");
         await initContractListeners(Contracts.getFarmlandRegistry(), Contracts.getCarbonCreditToken());
         logger.info("Listeners reinitialized");
     });
 
     logger.info("Init contracts...");
-    Contracts.init({
-        farmlandRegistry: <FarmlandRegistry> new Contract(
-            EnvVars.FARMLAND_REGISTRY_CONTRACT_ADDRESS,
-            FarmlandRegistryJSON.abi,
-            RPCProvider.provider
-        ),
-        carbonCreditToken: <CarbonCreditToken> new Contract(
-            EnvVars.CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS,
-            CarbonCreditTokenJSON.abi,
-            RPCProvider.provider
-        ),
-    });
+    initContracts(RPCProvider.provider);
 
     logger.info("Init http server...");
     const server = initHttpServer();
@@ -89,6 +68,27 @@ async function main(): Promise<void> {
     logger.info("Listeners initialized");
 
     logger.info("Done.");
+}
+
+function initContracts(provider: Provider): void {
+    Contracts.init({
+        farmlandRegistry: <FarmlandRegistry> new Contract(
+            EnvVars.FARMLAND_REGISTRY_CONTRACT_ADDRESS,
+            FarmlandRegistryJSON.abi,
+            new Wallet(
+                EnvVars.CONTRACTS_OWNER_SECRET,
+                provider
+            )
+        ),
+        carbonCreditToken: <CarbonCreditToken> new Contract(
+            EnvVars.CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS,
+            CarbonCreditTokenJSON.abi,
+            new Wallet(
+                EnvVars.CONTRACTS_OWNER_SECRET,
+                provider
+            )
+        ),
+    });
 }
 
 
