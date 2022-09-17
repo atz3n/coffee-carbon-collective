@@ -5,13 +5,15 @@ import { catchUpEvents } from "./eventCatchUpper";
 import { FarmlandRegistry } from "./interfaces/contracts/registry";
 import { CarbonCreditToken } from "./interfaces/contracts/token";
 import { createFarmlandMintListener } from "./listeners/farmland-mint/farmlandMint";
+import { createFarmlandTransferListener } from "./listeners/farmland-transfer/farmlandTransfer";
 import { createFarmlandUpdateListener } from "./listeners/farmland-update/farmlandUpdate";
 
 
 export async function initContractListeners(farmlandRegistry: FarmlandRegistry, carbonCreditToken: CarbonCreditToken): Promise<void> {
     const registryEventListeners = [
         createFarmlandMintListener(),
-        createFarmlandUpdateListener()
+        createFarmlandUpdateListener(),
+        createFarmlandTransferListener()
     ];
 
     // const tokenEventListeners = [

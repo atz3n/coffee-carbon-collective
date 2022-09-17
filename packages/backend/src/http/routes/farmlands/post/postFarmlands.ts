@@ -3,13 +3,14 @@ import { body } from "express-validator";
 import { Contracts } from "../../../../contract/Contracts";
 import { EnvVars } from "../../../../lib/EnvVars";
 import { IpfsStorer } from "../../../../lib/IpfsStorer";
+import { FarmerStore } from "../../../../storage/farmer/FarmerStore";
 import { FarmlandStore } from "../../../../storage/farmland/FarmlandStore";
 import { INVALID_INPUT_TEXT } from "../../../constants";
 import { createRouter } from "../../../routerFactory";
-import { PostFarmlandService } from "./PostFarmlandsService";
+import { PostFarmlandsService } from "./PostFarmlandsService";
 
 
-export function createPostFarmlandRouter(): Router {
+export function createPostFarmlandsRouter(): Router {
     return createRouter({
         method: "post",
         route: "/farmlands",
@@ -30,8 +31,9 @@ export function createPostFarmlandRouter(): Router {
             body("latitude").isNumeric().withMessage(INVALID_INPUT_TEXT + "latitude")
         ],
         middlewares: [ cleanseInputs ],
-        service: new PostFarmlandService({
+        service: new PostFarmlandsService({
             farmlandStore: FarmlandStore.get(),
+            farmerStore: FarmerStore.get(),
             farmlandRegistry: Contracts.getFarmlandRegistry(),
             ipfsStorer: new IpfsStorer({
                 authToken: EnvVars.NFT_STORAGE_TOKEN
@@ -44,7 +46,6 @@ export function createPostFarmlandRouter(): Router {
 function cleanseInputs(request: Request, response: Response, next: NextFunction): void {
     const newBody = {
         owner: request.body.owner,
-        tokenId: request.body.tokenId,
         description: request.body.description,
         imageName: request.body.imageName,
         imageData: request.body.imageData,

@@ -1,12 +1,14 @@
 import { BadRequestError } from "@atz3n/express-utils";
 import { FarmlandRegistry } from "../../../../contract/interfaces/contracts/registry";
 import { IpfsStorer } from "../../../../lib/IpfsStorer";
+import { IFarmerStore } from "../../../../storage/farmer/IFarmerStore";
 import { IFarmlandStore } from "../../../../storage/farmland/IFarmlandStore";
 import { RouteService } from "../../../routerFactory";
 
 
 interface Options {
     farmlandStore: IFarmlandStore;
+    farmerStore: IFarmerStore;
     farmlandRegistry: FarmlandRegistry;
     ipfsStorer: IpfsStorer;
 }
@@ -29,18 +31,28 @@ interface Inputs {
 }
 
 
-export class PostFarmlandService implements RouteService {
+interface Outputs {
+    tokenId: string;
+}
+
+
+export class PostFarmlandsService implements RouteService {
     constructor(private readonly options: Options) {}
 
 
-    public async run(inputs: Inputs): Promise<void> {
+    public async run(inputs: Inputs): Promise<Outputs> {
         const { owner, name, description, imageName, imageData, country, size,
             produce, altitude, kmlData, kmlName, longitude, latitude } = inputs;
         const tokenId = this.constructTokenId(latitude, longitude);
 
-        const _farmland = (await this.options.farmlandStore.find({ tokenId }))[0];
-        if (_farmland) {
+        const farmland = (await this.options.farmlandStore.find({ tokenId }))[0];
+        if (farmland) {
             throw new BadRequestError("Farmland already exists");
+        }
+
+        const farmer = (await this.options.farmerStore.find({ address: owner }))[0];
+        if (!farmer) {
+            throw new BadRequestError("farmer does not exist");
         }
 
         const cid = await this.options.ipfsStorer.store({
@@ -60,6 +72,8 @@ export class PostFarmlandService implements RouteService {
 
         await this.options.farmlandRegistry.safeMint(owner, tokenId);
         await this.options.farmlandRegistry.setTokenURI(tokenId, cid);
+
+        return { tokenId };
     }
 
     private constructTokenId(lat: number, long: number): string {

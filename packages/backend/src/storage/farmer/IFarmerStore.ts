@@ -10,6 +10,7 @@ export type Farmer = {
 export interface FindParams {
     email?: string;
     uid?: string;
+    address?: string;
 }
 
 export interface DeleteParams {
