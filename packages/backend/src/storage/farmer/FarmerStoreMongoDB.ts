@@ -10,7 +10,8 @@ export class FarmerStoreMongoDB extends AMongoDBStore implements IFarmerStore {
                 address: { type: String, required: true },
                 farmlands: { type: [String], required: true },
                 name: { type: String, required: true },
-                email: { type: String, required: true }
+                email: { type: String, required: true },
+                uid: { type: String, required: true }
             })),
             url: options.mongoUrl
         });
@@ -18,7 +19,7 @@ export class FarmerStoreMongoDB extends AMongoDBStore implements IFarmerStore {
 
 
     public async upsert(farmland: Farmer): Promise<void> {
-        await this._upsert({ email: farmland.email }, farmland);
+        await this._upsert({ uid: farmland.uid }, farmland);
     }
 
 

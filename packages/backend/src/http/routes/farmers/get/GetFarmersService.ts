@@ -2,7 +2,7 @@ import { Farmer, IFarmerStore } from "../../../../storage/farmer/IFarmerStore";
 import { RouteService } from "../../../routerFactory";
 
 
-interface GetFarmersServiceOptions {
+interface Options {
     farmerStore: IFarmerStore;
 }
 
@@ -16,7 +16,7 @@ interface Outputs {
 
 
 export class GetFarmersService implements RouteService {
-    constructor(private readonly options: GetFarmersServiceOptions) {}
+    constructor(private readonly options: Options) {}
 
 
     public async run(inputs: Inputs): Promise<Outputs> {

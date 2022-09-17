@@ -25,11 +25,16 @@ export function createPatchFarmersRouter(): Router {
 
 
 function cleanseInputs(request: Request, response: Response, next: NextFunction): void {
-    const newBody = {
-        name: request.body.name,
-        email: request.body.email,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const newBody = <any> {
         uid: request.body.uid
     };
+    if (request.body.name) {
+        newBody.name = request.body.name;
+    }
+    if (request.body.email) {
+        newBody.email = request.body.email;
+    }
 
     request.body = newBody;
     next();

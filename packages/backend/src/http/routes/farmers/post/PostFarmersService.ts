@@ -1,9 +1,10 @@
 import { BadRequestError } from "@atz3n/express-utils";
+import { randomUUID } from "crypto";
 import { IFarmerStore } from "../../../../storage/farmer/IFarmerStore";
 import { RouteService } from "../../../routerFactory";
 
 
-interface PostFarmersServiceOptions {
+interface Options {
     farmerStore: IFarmerStore;
 }
 
@@ -15,7 +16,7 @@ interface Inputs {
 
 
 export class PostFarmersService implements RouteService {
-    constructor(private readonly options: PostFarmersServiceOptions) {}
+    constructor(private readonly options: Options) {}
 
 
     public async run(inputs: Inputs): Promise<void> {
@@ -23,14 +24,15 @@ export class PostFarmersService implements RouteService {
 
         const farmer = (await this.options.farmerStore.find({ email }))[0];
         if (farmer) {
-            throw new BadRequestError("Farmer already exists");
+            throw new BadRequestError("email already used");
         }
 
         await this.options.farmerStore.upsert({
             address,
             email,
             farmlands: [],
-            name
+            name,
+            uid: randomUUID()
         });
     }
 }

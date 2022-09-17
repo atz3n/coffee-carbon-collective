@@ -3,15 +3,17 @@ export type Farmer = {
     farmlands: string[];
     name: string;
     email: string;
+    uid: string;
 }
 
 
 export interface FindParams {
-    email: string;
+    email?: string;
+    uid?: string;
 }
 
 export interface DeleteParams {
-    email: string;
+    uid: string;
 }
 
 export interface IFarmerStore {

@@ -12,7 +12,8 @@ export function createGetFarmersRouter(): Router {
         route: "/farmers",
         inputPath: "query",
         inputChecks: [
-            query("email").isEmail().withMessage(INVALID_INPUT_TEXT + "email")
+            query("email").optional().isEmail().withMessage(INVALID_INPUT_TEXT + "email"),
+            query("uid").optional().isString().withMessage(INVALID_INPUT_TEXT + "uid")
         ],
         middlewares: [ cleanseInputs],
         service: new GetFarmersService({
@@ -23,9 +24,14 @@ export function createGetFarmersRouter(): Router {
 
 
 function cleanseInputs(request: Request, response: Response, next: NextFunction): void {
-    const newQuery = {
-        email: request.query.email
-    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const newQuery = <any> {};
+    if (request.query.email) {
+        newQuery.email = request.query.email;
+    }
+    if (request.query.uid) {
+        newQuery.uid = request.query.uid;
+    }
 
     request.query = newQuery;
     next();

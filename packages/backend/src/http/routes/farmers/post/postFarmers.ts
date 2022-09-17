@@ -16,7 +16,7 @@ export function createPostFarmersRouter(): Router {
             body("name").isString().withMessage(INVALID_INPUT_TEXT + "name"),
             body("email").isEmail().withMessage(INVALID_INPUT_TEXT + "email")
         ],
-        middlewares: [ cleanseInputs],
+        middlewares: [ cleanseInputs ],
         service: new PostFarmersService({
             farmerStore: FarmerStore.get()
         })

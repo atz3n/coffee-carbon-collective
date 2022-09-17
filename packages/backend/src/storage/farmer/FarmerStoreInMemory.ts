@@ -7,7 +7,7 @@ export class FarmerStoreInMemory extends AInMemoryStore implements IFarmerStore 
 
 
     public async upsert(farmer: Farmer): Promise<void> {
-        this._upsert({ email: farmer.email }, farmer);
+        this._upsert({ uid: farmer.uid }, farmer);
     }
 
 
