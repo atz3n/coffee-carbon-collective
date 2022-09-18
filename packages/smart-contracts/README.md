@@ -45,3 +45,11 @@ for example:
 ```bash
 npx ts-node tools/accountGenerator -h
 ```
+
+
+## Deployed Contracts
+
+Explorer: https://alfajores-blockscout.celo-testnet.org
+
+- Farmland Registry: `0x5520EE223CeaECA4E54e0553e746d706deb5A5d6`
+- Carbon Credit Token: `0xedCA3ed2B98281d169D9472355ec5C9df7B2E988`
