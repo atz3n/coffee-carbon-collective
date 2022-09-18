@@ -1,0 +1,28 @@
+version: "3.8"
+networks:
+  ccc-backend-network:
+    external: false
+services:
+  ccc-backend:
+    image: ccc-backend
+    depends_on:
+      - ccc-backend-db
+    networks:
+      - ccc-backend-network
+    ports:
+      # extern:intern
+      - 3000:3000
+    environment:
+      - MONGO_DB_URL=mongodb://ccc-backend-db:27017
+      - RPC_URL=https://alfajores-forno.celo-testnet.org
+      - FARMLAND_REGISTRY_CONTRACT_ADDRESS=0x5520EE223CeaECA4E54e0553e746d706deb5A5d6
+      - CARBON_CREDIT_TOKEN_CONTRACT_ADDRESS=0xedCA3ed2B98281d169D9472355ec5C9df7B2E988
+      - CONTRACTS_OWNER_SECRET=0x5fe735cc65db34f63e18cd8615ee1f91b97a4b59d4916cb145738f91798d77c4
+      - NFT_STORAGE_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGRjN2E1YkVFMjU1MjJhMjBkMmRmRGMwZUY5MzgwODRjMzcxRjU2YWEiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY2MzMzNTY5OTMyMiwibmFtZSI6IndlYjNhdGhvbiJ9.FoEu9Rvh2E51BnyF-HM3n309aIq_8bzj_pIxiOXx7_o
+      - IPFS_GATEWAY_URLS=https://infura-ipfs.io/ipfs,https://ipfs.io/ipfs,https://gateway.pinata.cloud/ipfs,https://dweb.link/ipfs
+  ccc-backend-db:
+    image: mongo:4.4.1-bionic
+    networks:
+      - ccc-backend-network
+    volumes:
+      - ../data/ccc-backend:/data/db

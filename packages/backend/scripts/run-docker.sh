@@ -1,13 +1,12 @@
 #!/bin/bash
 
-# Builds demo images on your machine
+# Runs the docker-compose project
 
 ###################################################################################################
 # CONFIGURATION
 ###################################################################################################
 
-RELATIVE_BACKEND_PATH="../../packages/backend"
-RELATIVE_SMART_CONTRACTS_PATH="../../packages/smart-contracts"
+PROJECT_NAME="ccc-backend"
 
 
 ###################################################################################################
@@ -21,14 +20,10 @@ HERE="$(pwd)/$(dirname $0)"
 # MAIN
 ###################################################################################################
 
-cd ${HERE}
+SUDO=""
+if [ $(uname) == Linux ]; then
+    SUDO="sudo"
+fi
 
-echo "[INFO] Building ccc-backend image..."
-cd ${HERE}/${RELATIVE_BACKEND_PATH}
-./scripts/build-docker-image.sh
-
-echo "[INFO] Building contract deployer image..."
-cd ${HERE}/${RELATIVE_SMART_CONTRACTS_PATH}
-./scripts/build-docker-image.sh
-
-echo "[INFO] Done."
+cd ${HERE}/../docker
+${SUDO} docker-compose -p ${PROJECT_NAME} up -d
