@@ -1,10 +1,13 @@
 #!/bin/bash
 
-# Resets the demo data
+# Stops and removes the docker-compose project
 
 ###################################################################################################
 # CONFIGURATION
 ###################################################################################################
+
+PROJECT_NAME="ccc-backend"
+
 
 ###################################################################################################
 # DEFINES
@@ -17,16 +20,10 @@ HERE="$(pwd)/$(dirname $0)"
 # MAIN
 ###################################################################################################
 
-cd ${HERE}
-./stop-demo.sh
-
 SUDO=""
 if [ $(uname) == Linux ]; then
     SUDO="sudo"
 fi
 
-echo "[INFO] Removing data..."
-cd ..
-${SUDO} rm -rf data/
-
-echo "[INFO] Done."
+cd ${HERE}/../docker
+${SUDO} docker-compose -p ${PROJECT_NAME} down

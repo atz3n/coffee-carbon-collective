@@ -238,12 +238,14 @@ export interface FarmlandRegistryInterface extends utils.Interface {
     "Approval(address,address,uint256)": EventFragment;
     "ApprovalForAll(address,address,bool)": EventFragment;
     "OwnershipTransferred(address,address)": EventFragment;
+    "TokenURIUpdate(uint256,address,string)": EventFragment;
     "Transfer(address,address,uint256)": EventFragment;
   };
 
   getEvent(nameOrSignatureOrTopic: "Approval"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "ApprovalForAll"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "OwnershipTransferred"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "TokenURIUpdate"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "Transfer"): EventFragment;
 }
 
@@ -282,6 +284,18 @@ export type OwnershipTransferredEvent = TypedEvent<
 
 export type OwnershipTransferredEventFilter =
   TypedEventFilter<OwnershipTransferredEvent>;
+
+export interface TokenURIUpdateEventObject {
+  tokenId: BigNumber;
+  setter: string;
+  uri: string;
+}
+export type TokenURIUpdateEvent = TypedEvent<
+  [BigNumber, string, string],
+  TokenURIUpdateEventObject
+>;
+
+export type TokenURIUpdateEventFilter = TypedEventFilter<TokenURIUpdateEvent>;
 
 export interface TransferEventObject {
   from: string;
@@ -391,7 +405,7 @@ export interface FarmlandRegistry extends BaseContract {
 
     setTokenURI(
       tokenId: PromiseOrValue<BigNumberish>,
-      _tokenURI: PromiseOrValue<string>,
+      uri: PromiseOrValue<string>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<ContractTransaction>;
 
@@ -502,7 +516,7 @@ export interface FarmlandRegistry extends BaseContract {
 
   setTokenURI(
     tokenId: PromiseOrValue<BigNumberish>,
-    _tokenURI: PromiseOrValue<string>,
+    uri: PromiseOrValue<string>,
     overrides?: Overrides & { from?: PromiseOrValue<string> }
   ): Promise<ContractTransaction>;
 
@@ -611,7 +625,7 @@ export interface FarmlandRegistry extends BaseContract {
 
     setTokenURI(
       tokenId: PromiseOrValue<BigNumberish>,
-      _tokenURI: PromiseOrValue<string>,
+      uri: PromiseOrValue<string>,
       overrides?: CallOverrides
     ): Promise<void>;
 
@@ -684,6 +698,17 @@ export interface FarmlandRegistry extends BaseContract {
       previousOwner?: PromiseOrValue<string> | null,
       newOwner?: PromiseOrValue<string> | null
     ): OwnershipTransferredEventFilter;
+
+    "TokenURIUpdate(uint256,address,string)"(
+      tokenId?: PromiseOrValue<BigNumberish> | null,
+      setter?: PromiseOrValue<string> | null,
+      uri?: null
+    ): TokenURIUpdateEventFilter;
+    TokenURIUpdate(
+      tokenId?: PromiseOrValue<BigNumberish> | null,
+      setter?: PromiseOrValue<string> | null,
+      uri?: null
+    ): TokenURIUpdateEventFilter;
 
     "Transfer(address,address,uint256)"(
       from?: PromiseOrValue<string> | null,
@@ -767,7 +792,7 @@ export interface FarmlandRegistry extends BaseContract {
 
     setTokenURI(
       tokenId: PromiseOrValue<BigNumberish>,
-      _tokenURI: PromiseOrValue<string>,
+      uri: PromiseOrValue<string>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<BigNumber>;
 
@@ -879,7 +904,7 @@ export interface FarmlandRegistry extends BaseContract {
 
     setTokenURI(
       tokenId: PromiseOrValue<BigNumberish>,
-      _tokenURI: PromiseOrValue<string>,
+      uri: PromiseOrValue<string>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<PopulatedTransaction>;
 

@@ -2,16 +2,20 @@ import { EnvVars } from "../lib/EnvVars";
 import { BlockchainInfoStore } from "../storage/blockchain/BlockchainInfoStore";
 import { ContractEventHandler } from "./ContractEventHandler";
 import { catchUpEvents } from "./eventCatchUpper";
-import { createTokenMintListener } from "./listeners/token-mint/tokenMint";
-import { createTokenTransferListener } from "./listeners/token-transfer/tokenTransfer";
-import { createFarmlandMintListener } from "./listeners/farmland-mint/farmlandMint";
 import { FarmlandRegistry } from "./interfaces/contracts/registry";
 import { CarbonCreditToken } from "./interfaces/contracts/token";
+import { createFarmlandMintListener } from "./listeners/farmland-mint/farmlandMint";
+import { createFarmlandTransferListener } from "./listeners/farmland-transfer/farmlandTransfer";
+import { createFarmlandUpdateListener } from "./listeners/farmland-update/farmlandUpdate";
+import { createTokenMintListener } from "./listeners/token-mint/tokenMint";
+import { createTokenTransferListener } from "./listeners/token-transfer/tokenTransfer";
 
 
 export async function initContractListeners(farmlandRegistry: FarmlandRegistry, carbonCreditToken: CarbonCreditToken): Promise<void> {
     const registryEventListeners = [
-        createFarmlandMintListener()
+        createFarmlandMintListener(),
+        createFarmlandUpdateListener(),
+        createFarmlandTransferListener()
     ];
 
     const tokenEventListeners = [

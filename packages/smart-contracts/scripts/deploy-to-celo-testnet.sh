@@ -24,4 +24,4 @@ HERE="$(pwd)/$(dirname $0)"
 cd ${HERE}/..
 
 RPC_URL=${RPC_URL} DEPLOYER_SECRET=${DEPLOYER_SECRET} yarn deploy:registry
-RPC_URL=${RPC_URL} DEPLOYER_SECRET=${DEPLOYER_SECRET} yarn deploy:coin
+RPC_URL=${RPC_URL} DEPLOYER_SECRET=${DEPLOYER_SECRET} yarn deploy:token

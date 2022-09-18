@@ -1,0 +1,1401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Miriam fazenda cachoeira.kml</name>
+	<Schema name="CAR" id="S_CAR_SSSDDSSSSSSSS81">
+		<SimpleField type="string" name="cod_tema"><displayName>&lt;b&gt;cod_tema&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="nom_tema"><displayName>&lt;b&gt;nom_tema&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="cod_imovel"><displayName>&lt;b&gt;cod_imovel&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="double" name="mod_fiscal"><displayName>&lt;b&gt;mod_fiscal&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="double" name="num_area"><displayName>&lt;b&gt;num_area&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="ind_status"><displayName>&lt;b&gt;ind_status&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="des_condic"><displayName>&lt;b&gt;des_condic&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="municipio"><displayName>&lt;b&gt;municipio&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="cod_estado"><displayName>&lt;b&gt;cod_estado&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="nom_cadast"><displayName>&lt;b&gt;nom_cadast&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="cpf_cadast"><displayName>&lt;b&gt;cpf_cadast&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="nomes_prop"><displayName>&lt;b&gt;nomes_prop&lt;/b&gt;</displayName>
+</SimpleField>
+		<SimpleField type="string" name="cpfs_propr"><displayName>&lt;b&gt;cpfs_propr&lt;/b&gt;</displayName>
+</SimpleField>
+	</Schema>
+	<Style id="sn_ylw-pushpin122">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin283">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="falseColor01310027171">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor1910643</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor7106103</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="falseColor01310027170">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor191064</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor7106101</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin327">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin283</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0002</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="falseColor01310027173">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor1910640</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor7106106</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor1910642">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor191064">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor7106102">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="falseColor01310027172">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor1910644</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor710610</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor1910643">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin44">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin034</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl008</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor7106103">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor191061">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor1910644">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl29">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="falseColor01310027175">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor1910642</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor7106105</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor7106101">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor7106106">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin121">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0002">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin112">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin220</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl62</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin170">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor710610">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffff00</color>
+			<width>2.8</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin220">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl62">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl008">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="falseColor0131002717">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor1910646</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor7106104</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffff00</color>
+			<width>2.8</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor1910640">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin78">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin122</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1312</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin102">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin121</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl132</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin034">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl132">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0120">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin170</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl29</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor7106104">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor7106105">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor1910646">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1312">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="falseColor01310027176">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor1910641</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor7106102</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="falseColor0131002764">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#falseColor191061</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#falseColor710654</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="falseColor710654">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="falseColor1910641">
+		<BalloonStyle>
+			<text><![CDATA[<table border="0">
+  <tr><td><b>cod_tema</b></td><td>$[CAR/cod_tema]</td></tr>
+  <tr><td><b>nom_tema</b></td><td>$[CAR/nom_tema]</td></tr>
+  <tr><td><b>cod_imovel</b></td><td>$[CAR/cod_imovel]</td></tr>
+  <tr><td><b>mod_fiscal</b></td><td>$[CAR/mod_fiscal]</td></tr>
+  <tr><td><b>num_area</b></td><td>$[CAR/num_area]</td></tr>
+  <tr><td><b>ind_status</b></td><td>$[CAR/ind_status]</td></tr>
+  <tr><td><b>des_condic</b></td><td>$[CAR/des_condic]</td></tr>
+  <tr><td><b>municipio</b></td><td>$[CAR/municipio]</td></tr>
+  <tr><td><b>cod_estado</b></td><td>$[CAR/cod_estado]</td></tr>
+  <tr><td><b>nom_cadast</b></td><td>$[CAR/nom_cadast]</td></tr>
+  <tr><td><b>cpf_cadast</b></td><td>$[CAR/cpf_cadast]</td></tr>
+  <tr><td><b>nomes_prop</b></td><td>$[CAR/nomes_prop]</td></tr>
+  <tr><td><b>cpfs_propr</b></td><td>$[CAR/cpfs_propr]</td></tr>
+</table>]]></text>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>2.8</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>Miriam fazenda cachoeira</name>
+		<visibility>0</visibility>
+		<Placemark>
+			<name>FAZENDA CACHOEIRA</name>
+			<visibility>0</visibility>
+			<LookAt>
+				<longitude>-44.94176089086982</longitude>
+				<latitude>-20.89848571032074</latitude>
+				<altitude>0</altitude>
+				<heading>-0.006707085916769477</heading>
+				<tilt>0</tilt>
+				<range>395.8254106782828</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<StyleMap id="m_ylw-pushpin0350">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#s_ylw-pushpin0023</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#s_ylw-pushpin_hl32</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-44.94179722222222,-20.89853055555556,0</coordinates>
+			</Point>
+		</Placemark>
+		<Folder>
+			<name>Fazenda Goiaba Organicos</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Fazenda da Goiabeira</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-44.94724055425223</longitude>
+					<latitude>-20.89014389331418</latitude>
+					<altitude>0</altitude>
+					<heading>-0.001554589329392729</heading>
+					<tilt>0</tilt>
+					<range>3842.748900179186</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-44.94678162182069,-20.8883750025504,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fazenda Goiaba Miriam 96,70 ha</name>
+				<visibility>0</visibility>
+				<styleUrl>#falseColor01310027173</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="#S_CAR_SSSDDSSSSSSSS81">
+						<SimpleData name="cod_tema">AREA_IMOVEL</SimpleData>
+						<SimpleData name="nom_tema">�rea do Im�vel</SimpleData>
+						<SimpleData name="cod_imovel">MG-3159902-246A0519EADD4ADE84EF76BB30B19FFB</SimpleData>
+						<SimpleData name="mod_fiscal">3.22</SimpleData>
+						<SimpleData name="num_area">96.4689</SimpleData>
+						<SimpleData name="ind_status">AT</SimpleData>
+						<SimpleData name="des_condic"></SimpleData>
+						<SimpleData name="municipio">Santo Ant�nio do Amparo</SimpleData>
+						<SimpleData name="cod_estado">MG</SimpleData>
+						<SimpleData name="nom_cadast">SAULO LIMA DE CASTRO</SimpleData>
+						<SimpleData name="cpf_cadast">31429459620</SimpleData>
+						<SimpleData name="nomes_prop">M�RIAM MONTEIRO DE AGUIAR</SimpleData>
+						<SimpleData name="cpfs_propr">52227391634</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-44.94417190551757,-20.8899536132813,0 -44.94450007589049,-20.88937461430959,0 -44.94454511403498,-20.88864273212472,0 -44.94455578288017,-20.88822709046151,0 -44.94470622792999,-20.88764433239281,0 -44.94491045598238,-20.88705707360219,0 -44.94510379034909,-20.8866776336358,0 -44.94574801259358,-20.88574263744721,0 -44.9470038572176,-20.88423405807721,0 -44.94750976562501,-20.88356590270999,0 -44.94760894775391,-20.88246345520019,0 -44.9483609082801,-20.88190776253708,0 -44.95006179809571,-20.8810176849365,0 -44.95159912109381,-20.88118553161621,0 -44.95250701904298,-20.88158416748049,0 -44.9535681866795,-20.88234749033668,0 -44.9539604187012,-20.8827095031738,0 -44.95428466796878,-20.88335037231452,0 -44.95483779907229,-20.88420867919919,0 -44.9550860381103,-20.88447130159849,0 -44.95518673623878,-20.88544931011938,0 -44.95429842214072,-20.88578919629291,0 -44.95407098669688,-20.88580832316939,0 -44.9534798650386,-20.88619670137149,0 -44.95297114777338,-20.88668614375121,0 -44.95261148931709,-20.8873078621786,0 -44.95210881757497,-20.88816521438488,0 -44.95131879256159,-20.88951674342511,0 -44.95037694874139,-20.8910521932944,0 -44.94970703124999,-20.8920917510986,0 -44.94951262350489,-20.89241669906801,0 -44.9487419128418,-20.89332962036131,0 -44.948658574772,-20.89326065714209,0 -44.94818496704098,-20.8927555084229,0 -44.9475250244141,-20.89278221130369,0 -44.94673156738278,-20.8929576873779,0 -44.94594573974609,-20.8932189941406,0 -44.944144075834,-20.89329601841411,0 -44.94271087646479,-20.8930702209473,0 -44.94281768798828,-20.89264869689939,0 -44.94304065977719,-20.8919086653475,0 -44.94329452514648,-20.89142036437988,0 -44.9437370300293,-20.89070701599122,0 -44.94417190551757,-20.8899536132813,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>O 01</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-44.94999102958003</longitude>
+					<latitude>-20.88287153944233</latitude>
+					<altitude>0</altitude>
+					<heading>6.347531233560619e-005</heading>
+					<tilt>0</tilt>
+					<range>1024.834580744484</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin102</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-44.95252838172239,-20.88223264679434,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dutrinha Catigua 4,91 ha</name>
+				<visibility>0</visibility>
+				<styleUrl>#falseColor01310027175</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-44.94855400717966,-20.88206815079388,0 -44.94889835233,-20.88180452274392,0 -44.94926797971235,-20.88156513330894,0 -44.94965461107891,-20.88136517636494,0 -44.95005187031286,-20.88113587509016,0 -44.95014521731171,-20.88129851740453,0 -44.95011086103668,-20.88111060206434,0 -44.95033178809305,-20.8811100928187,0 -44.95065917154297,-20.88115436164722,0 -44.95102820987003,-20.88120180461644,0 -44.95130646263748,-20.88122934283,0 -44.95162211337097,-20.88130395793176,0 -44.95192366309862,-20.88140825120564,0 -44.95217380245585,-20.88158680348987,0 -44.95213282494811,-20.88173428331232,0 -44.9523006619355,-20.88157001182021,0 -44.95258766239552,-20.88172732616689,0 -44.95276359576251,-20.88192499292716,0 -44.95282669288844,-20.88220656305754,0 -44.95294156130222,-20.88245749081466,0 -44.95299083134874,-20.88274022462148,0 -44.9530194376163,-20.88302102535382,0 -44.95298502391081,-20.88326894122215,0 -44.95283100053079,-20.88328155854674,0 -44.95297051233736,-20.88333774637423,0 -44.95283546942558,-20.88370551120077,0 -44.95275196399675,-20.88397745352062,0 -44.95276081763088,-20.88414717457408,0 -44.95274094741251,-20.88426206125004,0 -44.95269256771523,-20.88426294622234,0 -44.95243506691586,-20.88408337220394,0 -44.95222271592955,-20.88390940203668,0 -44.95225772253562,-20.88380616567727,0 -44.95220788094038,-20.88380654450766,0 -44.95212280080548,-20.88376959069185,0 -44.9521178521329,-20.88365198276879,0 -44.95210275120856,-20.88356245878619,0 -44.95212781658022,-20.88337421565842,0 -44.95211270501417,-20.88323300969432,0 -44.95214173402988,-20.88310462858844,0 -44.95220399991334,-20.88289022493447,0 -44.95214935912581,-20.8827734743784,0 -44.95227054056947,-20.88281217687299,0 -44.95205512811525,-20.88259609768968,0 -44.95197605883218,-20.88248906606896,0 -44.95190612412405,-20.88235303135335,0 -44.95179002081258,-20.88218349904845,0 -44.95185301103334,-20.8820696765634,0 -44.95174444725619,-20.8821316261571,0 -44.95154836010273,-20.88197183020359,0 -44.95134244673382,-20.88183556666676,0 -44.9511758719638,-20.88171783335476,0 -44.95103471900058,-20.8816708355442,0 -44.95076313336644,-20.88167083731187,0 -44.95047550446796,-20.88172255421567,0 -44.95028768790855,-20.88176495610498,0 -44.95008749109696,-20.88184049057433,0 -44.95007446179946,-20.88176959545228,0 -44.94995257667507,-20.88192094748555,0 -44.94974678874357,-20.88203484380231,0 -44.94940728634656,-20.88226165728371,0 -44.94911966775515,-20.88243925785097,0 -44.9489318487725,-20.88246961804787,0 -44.94872298226517,-20.88245100607595,0 -44.94848923504825,-20.88241181747333,0 -44.9481728149545,-20.88227917246024,0 -44.94839374016225,-20.8820652248915,0 -44.94855400717966,-20.88206815079388,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>O 02</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-44.95221133763675</longitude>
+					<latitude>-20.88353048085273</latitude>
+					<altitude>0</altitude>
+					<heading>0.0008538438849721444</heading>
+					<tilt>0</tilt>
+					<range>816.76398485716</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin102</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-44.95389033344536,-20.88387110273033,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bela Vista l 3,50</name>
+				<visibility>0</visibility>
+				<styleUrl>#falseColor0131002717</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-44.95289052136791,-20.88430808253609,0 -44.95282525584016,-20.8841845744287,0 -44.95282587247448,-20.88403621873857,0 -44.9528387869202,-20.88390930493872,0 -44.95294269286937,-20.88360188793842,0 -44.95301658148344,-20.8833748842247,0 -44.95309323805022,-20.88314890035015,0 -44.95308266985644,-20.88290633891658,0 -44.95305068548481,-20.88263317654026,0 -44.95301702634917,-20.88243493980145,0 -44.95297416441252,-20.88227010225805,0 -44.95292105975528,-20.88204980990267,0 -44.95298737407072,-20.88204800433325,0 -44.95324650594944,-20.88232721066185,0 -44.953491746792,-20.88249827645599,0 -44.95387347084002,-20.8828077094566,0 -44.95397737391149,-20.8829421670757,0 -44.95409922461895,-20.88319278108242,0 -44.95429286852914,-20.88362738547934,0 -44.95447745124081,-20.88388615048262,0 -44.9547728992443,-20.8842701734214,0 -44.95485910567936,-20.88437990268538,0 -44.95491931001357,-20.88446985342867,0 -44.95488877174788,-20.88456586773883,0 -44.9548074161772,-20.8845706991094,0 -44.95465422316278,-20.88458299337292,0 -44.95454693709643,-20.88459752957429,0 -44.95445094907919,-20.88463779010588,0 -44.9543707310342,-20.88464356376611,0 -44.95411998082772,-20.88454136329692,0 -44.95401746855011,-20.88472494892678,0 -44.95396708011224,-20.88474081378404,0 -44.95388891538746,-20.88475392910279,0 -44.95381244742705,-20.88479170637945,0 -44.95374507120668,-20.88479933687355,0 -44.95364222673964,-20.88472977165487,0 -44.95365506591842,-20.88480585643416,0 -44.95358401447292,-20.88484770445389,0 -44.95350216978406,-20.88479666156043,0 -44.95354582249794,-20.88486440443572,0 -44.9535181977685,-20.884879582481,0 -44.95348235965275,-20.88484433555863,0 -44.9534153442015,-20.88484652819459,0 -44.95339982713062,-20.8848811234091,0 -44.95334936800655,-20.88488027673603,0 -44.95289052136791,-20.88430808253609,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>O 03</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-44.95077576227301</longitude>
+					<latitude>-20.88692071884655</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0001953402336223703</heading>
+					<tilt>0</tilt>
+					<range>1255.967044618348</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin102</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-44.9530804390583,-20.88578912892232,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bela Vista ll  5,41 ha</name>
+				<visibility>0</visibility>
+				<styleUrl>#falseColor01310027171</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-44.953530333289,-20.88490282230978,0 -44.9536251814865,-20.88498180919753,0 -44.95358807875694,-20.88488109133782,0 -44.95376204176503,-20.88482150335338,0 -44.95386291612869,-20.88492657561627,0 -44.95382873381494,-20.88481474811424,0 -44.95408548058459,-20.88472652491604,0 -44.95409857822268,-20.88476290353091,0 -44.95414048150533,-20.88491769545364,0 -44.9541376768574,-20.8848114468851,0 -44.95416363461378,-20.88480914315568,0 -44.95419473632408,-20.88479720886047,0 -44.95421536535062,-20.88472970765134,0 -44.95427740886009,-20.88466491226016,0 -44.95442693995611,-20.88466998913127,0 -44.95457920378303,-20.88463790204821,0 -44.9548423250734,-20.88459665581544,0 -44.95501466310764,-20.88457194337035,0 -44.95506577729753,-20.88511523415119,0 -44.95499256986754,-20.88512949462458,0 -44.95498177985641,-20.88523407338859,0 -44.95496903170253,-20.88543796057117,0 -44.95449118977937,-20.88559423827114,0 -44.95398219099748,-20.88576151937801,0 -44.95397847768878,-20.88566625448411,0 -44.95378608948715,-20.88581088172937,0 -44.95355624932201,-20.88593185593196,0 -44.95333269190481,-20.88604444184356,0 -44.95308718697388,-20.88632114658517,0 -44.95298448859939,-20.88646378509684,0 -44.95287574071785,-20.88660205448047,0 -44.95272813554189,-20.88678221348755,0 -44.95252194821751,-20.88671977322013,0 -44.95239469268324,-20.88668900478535,0 -44.95214136137903,-20.8864260646113,0 -44.95212543070772,-20.88621309318988,0 -44.95202937453189,-20.88630540841568,0 -44.95195098186611,-20.88624164864922,0 -44.95176405422838,-20.88609342227084,0 -44.95178412060177,-20.88597007624496,0 -44.95169437390442,-20.88605881006919,0 -44.95150682437251,-20.88598960790866,0 -44.95144630186289,-20.88593304250089,0 -44.95145782147137,-20.88580714996597,0 -44.95137416271284,-20.88587089470877,0 -44.95119940749223,-20.88584363949644,0 -44.95110478830441,-20.88579898018422,0 -44.95111053564949,-20.88568361290379,0 -44.95104979446804,-20.88576168364965,0 -44.95100026581089,-20.88574841908775,0 -44.95091193129527,-20.88566729236303,0 -44.95080424071049,-20.88560414343765,0 -44.95076798257641,-20.88550689152842,0 -44.95075912932325,-20.88538508011562,0 -44.95079125693528,-20.88527763813895,0 -44.95085473438312,-20.88511259472811,0 -44.95090076461857,-20.88495243916033,0 -44.950837119639,-20.88476951024445,0 -44.9508551400782,-20.88470265238144,0 -44.95092867937348,-20.88463892515886,0 -44.95100777335547,-20.88458939467979,0 -44.95115984572966,-20.88462646553225,0 -44.95130670631237,-20.88467936048732,0 -44.95146333477868,-20.88479926309519,0 -44.95148108267389,-20.88487057429067,0 -44.9513621553424,-20.88499752655326,0 -44.95150122725382,-20.88497077225462,0 -44.95165690449152,-20.88494972657161,0 -44.95176683998015,-20.88495279513503,0 -44.95185663581632,-20.88503024281811,0 -44.95174499734215,-20.88511791530656,0 -44.9519160214404,-20.88506201187982,0 -44.95223419404231,-20.88516290313682,0 -44.95217607213373,-20.88525627885896,0 -44.95231934146577,-20.88521895781741,0 -44.95238349729441,-20.88520817916589,0 -44.9526203747969,-20.88518348784379,0 -44.95281779846775,-20.88520257729496,0 -44.9527716891431,-20.88526814790906,0 -44.95286825408163,-20.88525235504671,0 -44.9530414114007,-20.88516611027697,0 -44.95318135522114,-20.88509819515064,0 -44.95332308750054,-20.88502583156588,0 -44.95343391715946,-20.88489732219412,0 -44.953530333289,-20.88490282230978,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>O 04</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-44.95077576227301</longitude>
+					<latitude>-20.88692071884655</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0001953402336223703</heading>
+					<tilt>0</tilt>
+					<range>1255.967044618348</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin102</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-44.95197113345336,-20.88761954458079,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dutra  1,80 ha</name>
+				<visibility>0</visibility>
+				<styleUrl>#falseColor01310027170</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-44.95257565177433,-20.88720151323565,0 -44.95241984272845,-20.88745310878249,0 -44.95223617322353,-20.88776710874356,0 -44.95207360548297,-20.88799187290748,0 -44.95185033097113,-20.88837303571783,0 -44.95180328377958,-20.88845602094073,0 -44.95154702169108,-20.88831733406733,0 -44.95122913631124,-20.88814846785954,0 -44.95093668812318,-20.88794708433888,0 -44.95084187256711,-20.88784142441618,0 -44.9508178968113,-20.88753161768771,0 -44.95104998134834,-20.88742783782753,0 -44.95121784726865,-20.88736551512692,0 -44.95153944401655,-20.88722003936984,0 -44.95184290647516,-20.88708449077063,0 -44.95186392354324,-20.88677888022078,0 -44.95202073064047,-20.88670779513383,0 -44.95226949233128,-20.88686293193991,0 -44.95257565177433,-20.88720151323565,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>O 05</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-44.95077576227301</longitude>
+					<latitude>-20.88692071884655</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0001953402336223703</heading>
+					<tilt>0</tilt>
+					<range>1255.967044618348</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin102</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-44.95161414374482,-20.88850703590104,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Anga l  0,63 ha</name>
+				<visibility>0</visibility>
+				<styleUrl>#falseColor01310027172</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-44.95169255369551,-20.88866371246278,0 -44.95163207209925,-20.88877485732598,0 -44.95155802115048,-20.88892981734965,0 -44.95147435889981,-20.88886425993419,0 -44.95137656981589,-20.88873206990935,0 -44.95125740526901,-20.88864710068445,0 -44.95113543865795,-20.8885811841272,0 -44.95126841799162,-20.88839715267556,0 -44.95120182359671,-20.88836222545112,0 -44.95103274471653,-20.88828649026454,0 -44.95089775875586,-20.88825458095843,0 -44.95071980157798,-20.88821974545176,0 -44.95060895072271,-20.88812693123431,0 -44.95045639146287,-20.88788506577445,0 -44.95042586414475,-20.88775399636247,0 -44.95053483167562,-20.88770273383867,0 -44.95074809361195,-20.88758012951189,0 -44.95084334204019,-20.88782885355028,0 -44.95091415070002,-20.88792273343024,0 -44.95122339492233,-20.88814511428225,0 -44.95180102247079,-20.88845409151843,0 -44.95169255369551,-20.88866371246278,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>O 06</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-44.95077576227301</longitude>
+					<latitude>-20.88692071884655</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0001953402336223703</heading>
+					<tilt>0</tilt>
+					<range>1255.967044618348</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin102</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-44.95025839575803,-20.8879205483004,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Anga ll  1,97 ha</name>
+				<visibility>0</visibility>
+				<styleUrl>#falseColor01310027176</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-44.95113355171253,-20.88858059725196,0 -44.95129212320822,-20.88871576323979,0 -44.95137520601168,-20.88880632315547,0 -44.95149374690904,-20.88895099963178,0 -44.95153666668566,-20.88898387411161,0 -44.95144536700361,-20.88912533217679,0 -44.95135363094976,-20.88925357634531,0 -44.95130111765891,-20.88923322963217,0 -44.9511999957597,-20.88909117618628,0 -44.95103595611504,-20.88889200327361,0 -44.95081712386014,-20.88874806346297,0 -44.95057971510207,-20.88879270913556,0 -44.95034972273658,-20.88887067140977,0 -44.95004401800845,-20.8889174191089,0 -44.94976429050114,-20.88890249699781,0 -44.94949184995681,-20.8887839817742,0 -44.94934866568643,-20.8886516481332,0 -44.94928411508816,-20.88847433384536,0 -44.94928546275173,-20.88823823056169,0 -44.94934757334945,-20.88798377653383,0 -44.94946309056614,-20.88781125381804,0 -44.94955660031909,-20.88781181123238,0 -44.94966407864212,-20.88782926625711,0 -44.94982267354288,-20.88788871658072,0 -44.94994060230222,-20.88785988789799,0 -44.94998673979412,-20.887972796495,0 -44.95005964242896,-20.88783691185882,0 -44.95017856022276,-20.88778514407611,0 -44.95031602199004,-20.88773372594398,0 -44.9504399402692,-20.88775432805083,0 -44.95044011415084,-20.88781556390108,0 -44.95042708623577,-20.8879221157816,0 -44.95047702576113,-20.88804850916564,0 -44.95055944749259,-20.88812028471275,0 -44.95061814915801,-20.8881996585727,0 -44.95070900714915,-20.88824880880695,0 -44.95082525853731,-20.88828288055786,0 -44.95092489433624,-20.88829864446587,0 -44.95101770318273,-20.88833828390909,0 -44.95113238485446,-20.88837787946136,0 -44.95124002455726,-20.88841732523059,0 -44.95113355171253,-20.88858059725196,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>corr</name>
+				<visibility>0</visibility>
+				<styleUrl>#m_ylw-pushpin0</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-44.95120237747017,-20.88336289504379,0 -44.95048795087708,-20.88344164843281,0 -44.950123333742,-20.88387488670648,0 -44.94942922310873,-20.88414253475398,0 -44.94834863096898,-20.88468499418437,0 -44.9470155235608,-20.88585057242426,0 -44.94860460127099,-20.88635908839553,0 -44.94915420650271,-20.88639543252879,0 -44.949503142795,-20.88644802975789,0 -44.94998328193925,-20.88633465118175,0 -44.95082439881152,-20.8864423894267,0 -44.94998328193925,-20.88633465118175,0 -44.949503142795,-20.88644802975789,0 -44.94919824920549,-20.88637543155905,0 -44.94860460127099,-20.88635908839553,0 -44.9470155235608,-20.88585057242426,0 -44.94522971031725,-20.88655479867921,0 -44.94468273224991,-20.88762282656454,0 -44.94459060526094,-20.88893506800164,0 -44.94579657457685,-20.88933068536641,0 -44.94642884743372,-20.8894406248621,0 -44.94728227072546,-20.88955132839145,0 -44.94790270279522,-20.89016667993337,0 -44.9489460590154,-20.89021175769017,0 -44.94790270279522,-20.89016667993337,0 -44.94732687167113,-20.88955170726158,0 -44.94645128699378,-20.88946202213036,0 -44.94584185596456,-20.88933093451784,0 -44.94459060526094,-20.88893506800164,0 -44.94452222652762,-20.88919155015828,0 -44.94404254784457,-20.89004459374258,0 -44.94326402225298,-20.89126080281888,0 -44.94262028328436,-20.8929507011429,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Caminho sem título</name>
+				<visibility>0</visibility>
+				<styleUrl>#m_ylw-pushpin0</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-44.94628971370842,-20.89473204158311,0 -44.94550139011872,-20.89572344613908,0 -44.9449335001452,-20.89669615214062,0 -44.9441311422347,-20.89743105042952,0 -44.94355912375316,-20.89729389784963,0 -44.94273216403402,-20.8963947047155,0 -44.9415186026311,-20.89579557912818,0 -44.9404475322641,-20.89648138791326,0 -44.93952383604326,-20.89785046344595,0 -44.93852254284146,-20.89879073061843,0 -44.93714287144017,-20.89956390927632,0 -44.93523496047573,-20.89920179763357,0 -44.93401527115921,-20.89903980358099,0 -44.93324372023553,-20.89827449676882,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Caminho sem título</name>
+				<visibility>0</visibility>
+				<styleUrl>#m_ylw-pushpin0</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-44.95682394054275,-20.89885883088986,0 -44.95594725366304,-20.89857485872455,0 -44.95522188799433,-20.89820520758736,0 -44.9544956029253,-20.89751818160652,0 -44.95343121800948,-20.89720650146672,0 -44.95236894295159,-20.8967852067719,0 -44.95135410235055,-20.89729479251243,0 -44.95015631437432,-20.89784808783877,0 -44.94856743151349,-20.89763661809596,0 -44.94723039295609,-20.89763968053934,0 -44.94590896389793,-20.89749240556902,0 -44.94462879752932,-20.89749406283371,0 -44.94403334933907,-20.8974090072844,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Caminho sem título</name>
+				<visibility>0</visibility>
+				<styleUrl>#m_ylw-pushpin0</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-44.93435776711632,-20.90181559669368,0 -44.93525254627377,-20.90172918944377,0 -44.93620276559195,-20.90177163827535,0 -44.93670581796907,-20.90192168347872,0 -44.93698378664211,-20.90196460420574,0 -44.9372053577027,-20.90220519464414,0 -44.93728667907708,-20.90248976538352,0 -44.93702848356839,-20.90287297162589,0 -44.93715778730298,-20.90335407489415,0 -44.93755428460751,-20.90360844337802,0 -44.93773034913836,-20.90388215411663,0 -44.93779072957727,-20.90432604876656,0 -44.93761559820282,-20.90518901797573,0 -44.93766330462974,-20.90635285291757,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Fazenda Cachoeira</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>T Cerradão 1</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-44.95042765054711</longitude>
+					<latitude>-20.90444347306037</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0008857772615240929</heading>
+					<tilt>0</tilt>
+					<range>1397.716480987827</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin44</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-44.94879171601738,-20.90355831488535,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cerradão 1   7,54 ha</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin78</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-44.94845142609873,-20.90413681078995,0 -44.94801076098809,-20.90445422632986,0 -44.94738912487879,-20.90491694400542,0 -44.94730277404674,-20.90484471829403,0 -44.94735173387015,-20.90494340674479,0 -44.94720454285492,-20.90504914462802,0 -44.94689199031266,-20.90526710228533,0 -44.94654549796272,-20.90547613682469,0 -44.94636372197958,-20.90552764577287,0 -44.94626187199592,-20.90551286523363,0 -44.94610493813148,-20.90536609582443,0 -44.94601179994468,-20.90519132470717,0 -44.94596876866278,-20.90500870943239,0 -44.945952315559,-20.90483789116875,0 -44.94593660073517,-20.90470120067106,0 -44.94587743167604,-20.90460246279026,0 -44.94578608848075,-20.90446704943121,0 -44.94572178738073,-20.90434331967769,0 -44.94569090123461,-20.90424779430487,0 -44.94564531556945,-20.90419655142661,0 -44.94749406545439,-20.9028433678779,0 -44.94891889760544,-20.90256390287937,0 -44.95041745140479,-20.90235261548317,0 -44.9506401789381,-20.90267168840043,0 -44.94958067603285,-20.9032888374273,0 -44.94845142609873,-20.90413681078995,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>T Cerradão 2</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-44.95042765054711</longitude>
+					<latitude>-20.90444347306037</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0008857772615240929</heading>
+					<tilt>0</tilt>
+					<range>1397.716480987827</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin44</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-44.94790025318176,-20.90238387058248,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cerradão 2  8,49 ha</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin78</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-44.94891087661397,-20.9025742168617,0 -44.94745765589084,-20.90282189376307,0 -44.94568911936458,-20.90424756388456,0 -44.94563750812192,-20.90418563491854,0 -44.94552958964973,-20.90415711712976,0 -44.94540700479031,-20.90406638468469,0 -44.94515313222248,-20.90382351065392,0 -44.94498953143971,-20.90363500158979,0 -44.94496905204181,-20.90351100956405,0 -44.94473192224326,-20.90326197232698,0 -44.94479652834606,-20.90318059627269,0 -44.94487700382024,-20.90320482630968,0 -44.94508285654801,-20.90313963524821,0 -44.94529045399897,-20.90310286470669,0 -44.94545610506698,-20.90303799212427,0 -44.9455860066349,-20.902952890964,0 -44.94572451982548,-20.90285555068213,0 -44.94585938940274,-20.90275841470986,0 -44.94599220834643,-20.90290916484968,0 -44.94592076915788,-20.90275474398096,0 -44.9461132777116,-20.90261616330476,0 -44.94624420458156,-20.90252235828286,0 -44.9463751277459,-20.9024366147586,0 -44.94650542062185,-20.90235535523645,0 -44.94663563367859,-20.90228620846588,0 -44.94676625458803,-20.90223674395438,0 -44.94689236269259,-20.90220729940517,0 -44.94698780832902,-20.90219417395762,0 -44.94710580554015,-20.90231853651542,0 -44.94703958752734,-20.90217375140074,0 -44.94716424298926,-20.90211715326575,0 -44.94729250065108,-20.90201349844923,0 -44.94736924181115,-20.90188211350216,0 -44.9473859003983,-20.90174234239141,0 -44.94741122392227,-20.90157347427932,0 -44.94742797144066,-20.9014194998015,0 -44.94749271029713,-20.9012269434042,0 -44.94751543141723,-20.90098533728105,0 -44.94769183168248,-20.9009380978847,0 -44.94783386130388,-20.90089915617574,0 -44.94810235623492,-20.90077190308274,0 -44.94829194152106,-20.9006385711702,0 -44.94858713103643,-20.90041933562597,0 -44.94875503785648,-20.9003340556422,0 -44.94888173595886,-20.90029391706699,0 -44.94907985734819,-20.90059516683913,0 -44.9495820955849,-20.90125586754617,0 -44.95024137263772,-20.90212110720768,0 -44.95040451123497,-20.90233660108608,0 -44.94891087661397,-20.9025742168617,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>T Cerradão 3</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-44.95166485727926</longitude>
+					<latitude>-20.90098434717224</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0004443027696376559</heading>
+					<tilt>0</tilt>
+					<range>1083.095107194277</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin44</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-44.95235192035312,-20.90114982860493,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cerradão 3   7,44 ha</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin78</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-44.95549980904539,-20.89987987351071,0 -44.95541034038455,-20.89976205398977,0 -44.95544004405993,-20.89987939737209,0 -44.95537322681532,-20.89990853714292,0 -44.95500406658889,-20.90003685708034,0 -44.95470383781252,-20.90012501853592,0 -44.9541137215997,-20.900397864645,0 -44.9539462090137,-20.90025026708216,0 -44.95403041570267,-20.9004221235161,0 -44.95363552510069,-20.90068801113224,0 -44.95289012090666,-20.90116746467812,0 -44.95284204265535,-20.90105103730988,0 -44.95286787392134,-20.90121148279041,0 -44.95176684678621,-20.90190597263976,0 -44.95163664049125,-20.90180032089228,0 -44.95171650564041,-20.90194122718985,0 -44.95137271624707,-20.90217757770524,0 -44.95068389558833,-20.90261442334594,0 -44.94943332054998,-20.90102985574799,0 -44.95256178204166,-20.90043416069615,0 -44.95460634342834,-20.89928907975883,0 -44.95485472586486,-20.89941323645487,0 -44.95501205837329,-20.89945034682553,0 -44.95513844723397,-20.89949934554823,0 -44.95528998974559,-20.89947942507762,0 -44.95533362042899,-20.89954023922531,0 -44.95532881225756,-20.89945520260132,0 -44.95561384992718,-20.89931450361346,0 -44.95583802250648,-20.89922252604914,0 -44.95606445934912,-20.89935417291344,0 -44.95621754670287,-20.89936723735708,0 -44.95653387576837,-20.89942126428858,0 -44.95665345548783,-20.89945581377322,0 -44.95549980904539,-20.89987987351071,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>T Cerradão 4</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-44.95271802157722</longitude>
+					<latitude>-20.90104954549133</latitude>
+					<altitude>0</altitude>
+					<heading>-6.865469759386504e-005</heading>
+					<tilt>0</tilt>
+					<range>1078.870544342855</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin44</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-44.95182404624565,-20.90007689141706,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cerradão 4  6,74 ha</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin78</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-44.95254191110747,-20.90045663651326,0 -44.95095158444345,-20.90077573892399,0 -44.94941821217972,-20.90102866197311,0 -44.94894888758144,-20.9002746587087,0 -44.95004466860861,-20.89994973869365,0 -44.95040861475248,-20.89983241258079,0 -44.95054740851627,-20.89997055423001,0 -44.9504673215614,-20.89981962536425,0 -44.95088108927912,-20.89969810065481,0 -44.95156951868141,-20.89944156987072,0 -44.95176868002583,-20.89937414811635,0 -44.95195546397969,-20.89931095146957,0 -44.95207385903137,-20.89949006984505,0 -44.95198724922202,-20.89929413278555,0 -44.95216879763931,-20.89920174534272,0 -44.95243279001714,-20.89909726245142,0 -44.95272294409984,-20.89897695854324,0 -44.95298370492798,-20.89888220396392,0 -44.95310284222057,-20.89904982920787,0 -44.95306419371843,-20.89885028019209,0 -44.95335802759564,-20.89873303877334,0 -44.95370893454106,-20.8986391193303,0 -44.95402558432144,-20.8985523082192,0 -44.95405756286304,-20.8986378661774,0 -44.95414272170584,-20.898843172439,0 -44.95435538719446,-20.8990425517677,0 -44.95460634342834,-20.89928907975883,0 -44.95254191110747,-20.90045663651326,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Folder>
+				<name>Sem Agrotoxicos SAT</name>
+				<visibility>0</visibility>
+				<open>1</open>
+				<Placemark>
+					<name>CAR Fernando Paiva 205, 00 Ha</name>
+					<visibility>0</visibility>
+					<styleUrl>#falseColor0131002764</styleUrl>
+					<ExtendedData>
+						<SchemaData schemaUrl="#S_CAR_SSSDDSSSSSSSS81">
+							<SimpleData name="cod_tema">AREA_IMOVEL</SimpleData>
+							<SimpleData name="nom_tema">�rea do Im�vel</SimpleData>
+							<SimpleData name="cod_imovel">MG-3159902-B9130B0B786D4AFB998FBEA0AE54C302</SimpleData>
+							<SimpleData name="mod_fiscal">6.82</SimpleData>
+							<SimpleData name="num_area">204.531</SimpleData>
+							<SimpleData name="ind_status">AT</SimpleData>
+							<SimpleData name="des_condic"></SimpleData>
+							<SimpleData name="municipio">Santo Ant�nio do Amparo</SimpleData>
+							<SimpleData name="cod_estado">MG</SimpleData>
+							<SimpleData name="nom_cadast">SAULO LIMA DE CASTRO</SimpleData>
+							<SimpleData name="cpf_cadast">31429459620</SimpleData>
+							<SimpleData name="nomes_prop">FERNANDO AGUIAR PAIVA</SimpleData>
+							<SimpleData name="cpfs_propr">00935913653</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Polygon>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									-44.93567276000979,-20.8958492279053,0 -44.93571090698239,-20.89532661437988,0 -44.93568801879881,-20.89452552795411,0 -44.93569183349609,-20.893388748169,0 -44.93689346313479,-20.89341163635251,0 -44.93829727172849,-20.89344215393069,0 -44.9389343261719,-20.8929500579834,0 -44.9395637512207,-20.89276504516599,0 -44.94018554687499,-20.89280700683591,0 -44.94097900390619,-20.89289665222171,0 -44.94197845458979,-20.89298439025879,0 -44.94271087646489,-20.8930702209473,0 -44.944144075834,-20.89329601841411,0 -44.94594573974609,-20.8932189941406,0 -44.94673156738278,-20.8929576873779,0 -44.9475250244141,-20.89278221130369,0 -44.94818496704098,-20.8927555084229,0 -44.948658574772,-20.89326065714212,0 -44.94766101857699,-20.89358175768009,0 -44.94725559978257,-20.89379397089451,0 -44.94621819099979,-20.89511738613781,0 -44.94568139269009,-20.89552382545229,0 -44.94512514078539,-20.8965356524227,0 -44.94478973972479,-20.8969709065809,0 -44.94443577195386,-20.89716117578291,0 -44.94453822084847,-20.89759264877699,0 -44.94505893611109,-20.89763347532451,0 -44.94505130671661,-20.89762393858129,0 -44.945598597106,-20.89748000847851,0 -44.94594191985991,-20.89747619378122,0 -44.9460962469488,-20.89750278715538,0 -44.94625483860069,-20.897679034298,0 -44.94644235747428,-20.89764295264569,0 -44.94655282514291,-20.8975973073423,0 -44.94703450096977,-20.8975884214984,0 -44.94721024501869,-20.89769690490589,0 -44.94735544028538,-20.89790884154609,0 -44.94742283078688,-20.89784304360619,0 -44.94749580316869,-20.8977562238921,0 -44.94768451380389,-20.89767305860988,0 -44.9478575791859,-20.89776988826541,0 -44.94804506772339,-20.8978060883719,0 -44.94830429146219,-20.89772434649827,0 -44.9485395813977,-20.89768827446901,0 -44.94868244467639,-20.89764815521749,0 -44.94885777980019,-20.89772451297171,0 -44.9488915511522,-20.89773405753329,0 -44.9489755322023,-20.8978329772068,0 -44.94902775361209,-20.89801822574211,0 -44.94908003610499,-20.8980227591997,0 -44.94925435565179,-20.89790534623099,0 -44.94952793030408,-20.89786074718426,0 -44.94978621892839,-20.8978783960165,0 -44.94992407264951,-20.8979571399351,0 -44.95008475373329,-20.89788941415752,0 -44.95026982615539,-20.89795923541089,0 -44.9504140787089,-20.8978800264259,0 -44.95058347697199,-20.89774214411879,0 -44.95071767124179,-20.8977652781715,0 -44.95102646055469,-20.89757743972149,0 -44.9514271993453,-20.89751532981901,0 -44.9515473958368,-20.8973932054898,0 -44.9515479006136,-20.89725061069041,0 -44.95186716730538,-20.89715983467912,0 -44.95243272333968,-20.89681795052344,0 -44.95261734577667,-20.8967181270084,0 -44.9529902836297,-20.89685374890038,0 -44.9533847350871,-20.89711137593618,0 -44.95372076951428,-20.89718877007212,0 -44.95409840707279,-20.8974102478989,0 -44.9548301562322,-20.8977578204255,0 -44.95533937894561,-20.8980787234994,0 -44.95624243443148,-20.8987566385892,0 -44.95711952447899,-20.89928884059191,0 -44.95728956719278,-20.89939442562269,0 -44.95747953773866,-20.89916857915298,0 -44.95750753882371,-20.89896979953689,0 -44.95762363756621,-20.89857225518659,0 -44.9577574711293,-20.89836909435689,0 -44.9578467383981,-20.89853899553418,0 -44.95805419050157,-20.89871107600629,0 -44.9584999084473,-20.89903259277338,0 -44.9585221521557,-20.89960726909339,0 -44.95861443690958,-20.89997498318561,0 -44.95891920290887,-20.9006274305284,0 -44.95903478935369,-20.9009974915535,0 -44.95924660004678,-20.9016090352088,0 -44.95940443128347,-20.90188371017581,0 -44.9590786267072,-20.90201974846431,0 -44.9587821960449,-20.90206909179691,0 -44.9584261311416,-20.90220482468617,0 -44.9580504254478,-20.9025345377601,0 -44.95783885940909,-20.9027948230505,0 -44.95768764987588,-20.90285517275339,0 -44.95722723193469,-20.9015008248389,0 -44.95699691772458,-20.90102958679201,0 -44.95668978430339,-20.90068677440292,0 -44.9562082439661,-20.90031201951212,0 -44.95600070804358,-20.9002180583775,0 -44.95523326098919,-20.9001334849745,0 -44.95463562011718,-20.9003467559814,0 -44.95394897460937,-20.90064048767089,0 -44.95261001586908,-20.90152931213378,0 -44.95077133178712,-20.90275382995612,0 -44.9499702453613,-20.9032325744629,0 -44.94899368286129,-20.90392303466803,0 -44.94762802124021,-20.90491676330572,0 -44.94659042358399,-20.90562629699711,0 -44.94633102416986,-20.90581512451171,0 -44.94613132673209,-20.906150013065,0 -44.94572583585978,-20.90577375143769,0 -44.94579295164229,-20.90535024258961,0 -44.94566598114761,-20.9049616651864,0 -44.94540588999947,-20.90457756306871,0 -44.94501868744909,-20.90420245543799,0 -44.9442668201396,-20.9034657984795,0 -44.94337740086141,-20.90255289555109,0 -44.94294182094139,-20.90220035648269,0 -44.94227810762828,-20.90168011374772,0 -44.9422296602279,-20.9017096180469,0 -44.9421474644152,-20.90182962372322,0 -44.94184494018549,-20.9023265838623,0 -44.9416580200195,-20.90268325805674,0 -44.9412379134447,-20.90369177050889,0 -44.94106440804899,-20.90366679243751,0 -44.94086181744939,-20.90367718599739,0 -44.94068462401629,-20.9037565626204,0 -44.94035052135589,-20.903752790764,0 -44.94021917693319,-20.90371381491421,0 -44.94012169539928,-20.9037262201309,0 -44.9400382116437,-20.90379796922213,0 -44.93992212228477,-20.90384029783311,0 -44.93981240317228,-20.90403953567149,0 -44.9393327906728,-20.9041244443506,0 -44.93924385868019,-20.90418705716731,0 -44.93902224116027,-20.90438361279669,0 -44.93901260197168,-20.9043988678605,0 -44.93880087509759,-20.90458762831988,0 -44.93871076963848,-20.9046308789403,0 -44.9386403616518,-20.904654012993,0 -44.9385816045106,-20.90461914427578,0 -44.93854405358439,-20.9046074934304,0 -44.93839376606047,-20.9046400152147,0 -44.93838932365179,-20.90474470518529,0 -44.9382140580565,-20.90475828386851,0 -44.93806628610338,-20.90455698912692,0 -44.93780012690797,-20.90436262392181,0 -44.93770642642938,-20.90423157147449,0 -44.93768276567798,-20.90404181217932,0 -44.93771438662938,-20.9038746624006,0 -44.9376988187438,-20.90373460265539,0 -44.9375420131534,-20.90360804496529,0 -44.93734641600719,-20.90354924101292,0 -44.93712997436518,-20.90345382690433,0 -44.93706130981447,-20.9032287597656,0 -44.93705368041989,-20.90303039550782,0 -44.93701553344729,-20.9028263092041,0 -44.93710327148441,-20.9027271270752,0 -44.93722152709957,-20.90253257751459,0 -44.93723678588867,-20.9024829864502,0 -44.93724831809419,-20.9024332902311,0 -44.93724822998048,-20.9023876190186,0 -44.93713069707157,-20.9021849557758,0 -44.93697262345268,-20.90205820523521,0 -44.93681791229599,-20.9019587548783,0 -44.93666147813209,-20.9019273798913,0 -44.93655754253268,-20.90198395773771,0 -44.93657950311899,-20.90205512009561,0 -44.9365427903831,-20.90208856388933,0 -44.93634824641049,-20.9022051561624,0 -44.93590953759849,-20.90248737484219,0 -44.9355926513672,-20.90249061584473,0 -44.93537139892579,-20.90257644653321,0 -44.9350738525391,-20.90264511108402,0 -44.9347534179688,-20.9028263092041,0 -44.9343605041504,-20.90296936035159,0 -44.9337749183178,-20.90357752516872,0 -44.93358716368681,-20.9031900297851,0 -44.93350552394988,-20.9029795601964,0 -44.93327091448009,-20.90254479087889,0 -44.93245697021478,-20.901252746582,0 -44.9324510833797,-20.90083665190563,0 -44.93278062588149,-20.90037144074881,0 -44.93342690304428,-20.89985213808949,0 -44.93390655517579,-20.89945411682129,0 -44.93403625488278,-20.8993282318115,0 -44.93442535400389,-20.89892578125,0 -44.93462753295898,-20.89850997924799,0 -44.9348411560059,-20.8979682922363,0 -44.93492126464837,-20.89759826660159,0 -44.93521499633788,-20.89715576171869,0 -44.93545913696288,-20.89680290222171,0 -44.9355773925781,-20.8964824676514,0 -44.93567276000979,-20.8958492279053,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>O 09</name>
+					<visibility>0</visibility>
+					<LookAt>
+						<longitude>-44.94006432284449</longitude>
+						<latitude>-20.9004964801699</latitude>
+						<altitude>0</altitude>
+						<heading>-0.004180278741496972</heading>
+						<tilt>0</tilt>
+						<range>869.2888747110567</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin112</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>-44.94021005774341,-20.90109331825096,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Banana 7,20 ha</name>
+					<visibility>0</visibility>
+					<styleUrl>#m_ylw-pushpin0120</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									-44.94007500750269,-20.90017656776202,0 -44.94044910972753,-20.89987207216504,0 -44.94102066884484,-20.89973298481927,0 -44.94129499283361,-20.89968359384602,0 -44.94140542633804,-20.89971739452835,0 -44.94131720207077,-20.89987686526833,0 -44.94144093879873,-20.89981149895435,0 -44.94160188147507,-20.89981934980166,0 -44.94174093527744,-20.90029912208163,0 -44.94184913470846,-20.90055439192825,0 -44.94190066286151,-20.90098175527868,0 -44.94164518218747,-20.9013204021213,0 -44.94152391902821,-20.90149498902486,0 -44.94134236593267,-20.90174973416234,0 -44.94124108866893,-20.90187163688821,0 -44.94111815296468,-20.90200192687849,0 -44.9409849331883,-20.9019459775131,0 -44.94104532627807,-20.90203419883574,0 -44.94094059746732,-20.90208353159439,0 -44.94089598137237,-20.9020748761416,0 -44.9408041764671,-20.90209010601837,0 -44.94068577482981,-20.90215010412828,0 -44.94058551734552,-20.90218625309117,0 -44.94051743695056,-20.90216387281977,0 -44.9403819701259,-20.9022245578399,0 -44.94030260781833,-20.9022665605908,0 -44.94015350433124,-20.90226181119005,0 -44.9400401935706,-20.90227467271954,0 -44.93990621163466,-20.90230737997146,0 -44.93981817370754,-20.90227574103321,0 -44.9397045177812,-20.90226733455252,0 -44.93963127660226,-20.90226580668392,0 -44.9395534189341,-20.90222312633615,0 -44.93954550450857,-20.90207705451118,0 -44.9394884976049,-20.90226844609058,0 -44.93942429191259,-20.90227983857354,0 -44.93931537895467,-20.90232839198127,0 -44.93918861837617,-20.90237440750772,0 -44.93908533622421,-20.90240398768744,0 -44.93901730405577,-20.90238060840303,0 -44.93894466530098,-20.902370297761,0 -44.9388584625067,-20.90238680425732,0 -44.93876684700256,-20.90234877023645,0 -44.938719365711,-20.90227708813949,0 -44.9387275897514,-20.90216515221917,0 -44.93871318965707,-20.90205373299932,0 -44.9387215943198,-20.90194432686985,0 -44.93868352673047,-20.90190388323042,0 -44.93871003691753,-20.90174627841021,0 -44.93871197123568,-20.90167263408826,0 -44.9387200893866,-20.90158746428375,0 -44.93866191625862,-20.90156784501551,0 -44.93858571027339,-20.90140694771505,0 -44.93859172738117,-20.9013475644836,0 -44.9385106559983,-20.90131306341223,0 -44.93857173755353,-20.90118414737896,0 -44.93849687015836,-20.90117758121,0 -44.93843913959962,-20.90125480406768,0 -44.93843714959021,-20.90119369892309,0 -44.93841490463769,-20.90114237519688,0 -44.93841874437477,-20.90108025778046,0 -44.93843514628074,-20.90100244746888,0 -44.93856249844158,-20.90079568728353,0 -44.9386406562544,-20.90073892710425,0 -44.93872898399314,-20.90068048390921,0 -44.9387687214876,-20.90066107836364,0 -44.93885568333652,-20.90058343958951,0 -44.93889962622082,-20.90060107623812,0 -44.9389721851386,-20.90054115536143,0 -44.9390694754162,-20.90045618746803,0 -44.93916452582656,-20.90043002225199,0 -44.93925642105803,-20.90052197993619,0 -44.93930560244786,-20.90060245279992,0 -44.93936197592286,-20.90062720254779,0 -44.93941589956778,-20.9006554718664,0 -44.93949463287967,-20.90069645850318,0 -44.93943059890241,-20.90061416038342,0 -44.94007500750269,-20.90017656776202,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>O 10</name>
+					<visibility>0</visibility>
+					<LookAt>
+						<longitude>-44.94382627102761</longitude>
+						<latitude>-20.90016332767636</latitude>
+						<altitude>0</altitude>
+						<heading>-0.003903275742173026</heading>
+						<tilt>0</tilt>
+						<range>1355.191227963399</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin112</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>-44.94310398547133,-20.90059435772542,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Serraria  1,95 ha</name>
+					<visibility>0</visibility>
+					<styleUrl>#msn_ylw-pushpin78</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									-44.94235977427998,-20.89977909204919,0 -44.94248562762913,-20.89973646008161,0 -44.94260916041277,-20.89968455979323,0 -44.94265948279845,-20.89962412943124,0 -44.9428221358915,-20.89957991248228,0 -44.9429245692615,-20.89956643397922,0 -44.94303789007902,-20.89961608516488,0 -44.94322693989165,-20.89974858534789,0 -44.94334500132607,-20.89988603006282,0 -44.94333125496384,-20.90003649306456,0 -44.94337400340366,-20.89994004984784,0 -44.94347082841415,-20.90014385866363,0 -44.94353889639358,-20.90032288645722,0 -44.94358778394118,-20.90051825129321,0 -44.94359862862293,-20.90071405943091,0 -44.9435866368802,-20.90079771599466,0 -44.9435565397204,-20.90102437858575,0 -44.94352053106992,-20.90123990552717,0 -44.94351168944827,-20.90149932104014,0 -44.94349713243252,-20.90170247645887,0 -44.94340500835371,-20.90174840959902,0 -44.94353842994988,-20.90199676699638,0 -44.9435629497458,-20.90215332107596,0 -44.94359388639677,-20.90227485122201,0 -44.94358457877537,-20.90237901952254,0 -44.94353807393625,-20.90231264899234,0 -44.94337427293022,-20.90201718615385,0 -44.94334966655281,-20.90173379383363,0 -44.94323448649498,-20.9014938032825,0 -44.94301572510113,-20.90121775314985,0 -44.94286508015311,-20.90107741228445,0 -44.94282220101282,-20.90096771706567,0 -44.94273929357196,-20.90074649410585,0 -44.94268636671567,-20.90062349445323,0 -44.94255744060742,-20.90055430841844,0 -44.94235921624286,-20.90012727930985,0 -44.94216029178924,-20.89979666601396,0 -44.94235977427998,-20.89977909204919,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>Organico</name>
+					<visibility>0</visibility>
+					<LookAt>
+						<longitude>-44.94072068386812</longitude>
+						<latitude>-20.90044713583321</latitude>
+						<altitude>0</altitude>
+						<heading>0.0002008308263474091</heading>
+						<tilt>0</tilt>
+						<range>754.137985445074</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin44</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>-44.94207974371393,-20.90031329949915,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Cafe Mato Organico 0,89 ha</name>
+					<visibility>0</visibility>
+					<styleUrl>#msn_ylw-pushpin327</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									-44.94253615413536,-20.90074460631314,0 -44.94263911043995,-20.90107301667112,0 -44.94260336820364,-20.90127176831925,0 -44.94245669508805,-20.90139486531399,0 -44.94238368808089,-20.90150450615873,0 -44.94226672086423,-20.90149098774191,0 -44.94217210062095,-20.9013476373649,0 -44.94213585519701,-20.9013478965797,0 -44.94205557826867,-20.90119741303406,0 -44.94196028484681,-20.90097132503993,0 -44.94172216474462,-20.90023043093508,0 -44.94210799397227,-20.89994732562271,0 -44.94253615413536,-20.90074460631314,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+			</Folder>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

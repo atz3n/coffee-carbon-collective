@@ -1,14 +1,26 @@
 import { model, Schema } from "mongoose";
 import { AMongoDBStore } from "../AMongoDBStore";
-import { Farmland, IFarmlandStore } from "./IFarmlandStore";
+import { DeleteParams, Farmland, FindParams, IFarmlandStore } from "./IFarmlandStore";
 
 
 export class FarmlandStoreMongoDB extends AMongoDBStore implements IFarmlandStore {
     constructor(options: { mongoUrl: string }) {
         super({
             model: model("Farmland", new Schema<Farmland>({
-                tokenId: { type: Number, required: true },
-                owner: { type: String, required: true }
+                tokenId: { type: String, required: true },
+                owner: { type: String, required: true },
+                description: { type: String, required: false },
+                imageData: { type: String, required: false },
+                imageName: { type: String, required: false },
+                name: { type: String, required: false },
+                country: { type: String, required: false },
+                produce: { type: String, required: false },
+                size: { type: Number, required: false },
+                altitude: { type: Number, required: false },
+                kmlData: { type: String, required: false },
+                kmlName: { type: String, required: false },
+                longitude: { type: Number, required: false },
+                latitude: { type: Number, required: false }
             })),
             url: options.mongoUrl
         });
@@ -20,12 +32,12 @@ export class FarmlandStoreMongoDB extends AMongoDBStore implements IFarmlandStor
     }
 
 
-    public async find(params: {tokenId?: number}): Promise<Farmland[]> {
+    public async find(params: FindParams): Promise<Farmland[]> {
         return await this._find(params);
     }
 
 
-    public async delete(params: {tokenId?: number}): Promise<void> {
+    public async delete(params: DeleteParams): Promise<void> {
         await this._delete(params);
     }
 }
