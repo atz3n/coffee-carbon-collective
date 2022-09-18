@@ -13,7 +13,7 @@ export function createGetFarmlandsRouter(): Router {
         inputPath: "query",
         inputChecks: [
             query("owner").optional().isEmail().withMessage(INVALID_INPUT_TEXT + "owner"),
-            query("tokenId").optional().isEmail().withMessage(INVALID_INPUT_TEXT + "tokenId")
+            query("tokenId").optional().isString().withMessage(INVALID_INPUT_TEXT + "tokenId")
         ],
         middlewares: [ cleanseInputs ],
         service: new GetFarmlandsService({

@@ -5,7 +5,7 @@ import { FarmerStore } from "../../../../../storage/farmer/FarmerStore";
 import { FarmlandStore } from "../../../../../storage/farmland/FarmlandStore";
 import { INVALID_INPUT_TEXT } from "../../../../constants";
 import { createRouter } from "../../../../routerFactory";
-import { PostFarmlandsOwnerService } from "./PatchtFarmlandsOwnerService";
+import { PatchFarmlandsOwnerService } from "./PatchFarmlandsOwnerService";
 
 
 export function createPatchFarmlandsOwnerRouter(): Router {
@@ -18,7 +18,7 @@ export function createPatchFarmlandsOwnerRouter(): Router {
             body("owner").isString().withMessage(INVALID_INPUT_TEXT + "owner")
         ],
         middlewares: [ cleanseInputs ],
-        service: new PostFarmlandsOwnerService({
+        service: new PatchFarmlandsOwnerService({
             farmerStore: FarmerStore.get(),
             farmlandRegistry: Contracts.getFarmlandRegistry(),
             farmlandStore: FarmlandStore.get()

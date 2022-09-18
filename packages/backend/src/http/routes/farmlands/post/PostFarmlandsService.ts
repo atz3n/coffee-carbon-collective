@@ -3,6 +3,7 @@ import { FarmlandRegistry } from "../../../../contract/interfaces/contracts/regi
 import { IpfsStorer } from "../../../../lib/IpfsStorer";
 import { IFarmerStore } from "../../../../storage/farmer/IFarmerStore";
 import { IFarmlandStore } from "../../../../storage/farmland/IFarmlandStore";
+import { untilSettled } from "../../../../utils/txHelper";
 import { RouteService } from "../../../routerFactory";
 
 
@@ -70,8 +71,11 @@ export class PostFarmlandsService implements RouteService {
             size
         });
 
-        await this.options.farmlandRegistry.safeMint(owner, tokenId);
+        await untilSettled(this.options.farmlandRegistry.safeMint(owner, tokenId));
         await this.options.farmlandRegistry.setTokenURI(tokenId, cid);
+
+        farmer.farmlands.push(tokenId);
+        await this.options.farmerStore.upsert(farmer);
 
         return { tokenId };
     }

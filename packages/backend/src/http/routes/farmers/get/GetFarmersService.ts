@@ -8,6 +8,7 @@ interface Options {
 
 interface Inputs {
     email: string;
+    uid: string;
 }
 
 interface Outputs {
@@ -20,8 +21,7 @@ export class GetFarmersService implements RouteService {
 
 
     public async run(inputs: Inputs): Promise<Outputs> {
-        const { email } = inputs;
-        const farmers = await this.options.farmerStore.find({ email });
+        const farmers = await this.options.farmerStore.find(inputs);
         return { farmers };
     }
 }

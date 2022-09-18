@@ -21,8 +21,7 @@ export class GetFarmlandsService implements RouteService {
 
 
     public async run(inputs: Inputs): Promise<Outputs> {
-        const { owner, tokenId } = inputs;
-        const farmlands = await this.options.farmlandStore.find({ owner, tokenId });
+        const farmlands = await this.options.farmlandStore.find(inputs);
         return { farmlands };
     }
 }

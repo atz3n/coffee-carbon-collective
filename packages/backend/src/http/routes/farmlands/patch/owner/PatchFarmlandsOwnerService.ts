@@ -18,7 +18,7 @@ interface Inputs {
 }
 
 
-export class PostFarmlandsOwnerService implements RouteService {
+export class PatchFarmlandsOwnerService implements RouteService {
     constructor(private readonly options: Options) {}
 
 

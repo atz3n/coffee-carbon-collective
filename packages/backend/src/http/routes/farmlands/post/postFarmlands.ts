@@ -54,8 +54,8 @@ function cleanseInputs(request: Request, response: Response, next: NextFunction)
         produce: request.body.produce,
         size: request.body.size,
         altitude: request.body.altitude,
-        kmlImageName: request.body.kmlImageName,
-        kmlImageData: request.body.kmlImageData,
+        kmlName: request.body.kmlName,
+        kmlData: request.body.kmlData,
         longitude: request.body.longitude,
         latitude: request.body.latitude
     };

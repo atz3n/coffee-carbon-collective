@@ -6,7 +6,7 @@ import { IpfsStorer } from "../../../../../lib/IpfsStorer";
 import { FarmlandStore } from "../../../../../storage/farmland/FarmlandStore";
 import { INVALID_INPUT_TEXT } from "../../../../constants";
 import { createRouter } from "../../../../routerFactory";
-import { PostFarmlandsDataService } from "./PatchtFarmlandsDataService";
+import { PatchFarmlandsDataService } from "./PatchFarmlandsDataService";
 
 
 export function createPatchFarmlandsDataRouter(): Router {
@@ -27,7 +27,7 @@ export function createPatchFarmlandsDataRouter(): Router {
             body("size").optional().isNumeric().withMessage(INVALID_INPUT_TEXT + "size")
         ],
         middlewares: [ cleanseInputs ],
-        service: new PostFarmlandsDataService({
+        service: new PatchFarmlandsDataService({
             farmlandRegistry: Contracts.getFarmlandRegistry(),
             farmlandStore: FarmlandStore.get(),
             ipfsStorer: new IpfsStorer({

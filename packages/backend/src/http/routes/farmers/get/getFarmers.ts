@@ -13,7 +13,8 @@ export function createGetFarmersRouter(): Router {
         inputPath: "query",
         inputChecks: [
             query("email").optional().isEmail().withMessage(INVALID_INPUT_TEXT + "email"),
-            query("uid").optional().isString().withMessage(INVALID_INPUT_TEXT + "uid")
+            query("uid").optional().isString().withMessage(INVALID_INPUT_TEXT + "uid"),
+            query("address").optional().isString().withMessage(INVALID_INPUT_TEXT + "address")
         ],
         middlewares: [ cleanseInputs],
         service: new GetFarmersService({
@@ -30,6 +31,9 @@ function cleanseInputs(request: Request, response: Response, next: NextFunction)
         newQuery.email = request.query.email;
     }
     if (request.query.uid) {
+        newQuery.uid = request.query.uid;
+    }
+    if (request.query.address) {
         newQuery.uid = request.query.uid;
     }
 
