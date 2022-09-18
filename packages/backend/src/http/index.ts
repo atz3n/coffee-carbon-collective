@@ -13,6 +13,7 @@ import { createGetFarmersRouter } from "./routes/farmers/get/getFarmers";
 import { createPatchFarmersRouter } from "./routes/farmers/patch/patchFarmers";
 import { createPostFarmersRouter } from "./routes/farmers/post/postFarmers";
 import { createGetFarmlandsRouter } from "./routes/farmlands/get/getFarmlands";
+import { createPatchFarmlandsDataRouter } from "./routes/farmlands/patch/data/patchFarmlandsData";
 import { createPatchFarmlandsOwnerRouter } from "./routes/farmlands/patch/owner/patchFarmlandsOwner";
 import { createPostFarmlandsRouter } from "./routes/farmlands/post/postFarmlands";
 
@@ -37,6 +38,7 @@ export function initHttpServer(): Server {
     httpServer.use(createGetFarmlandsRouter());
     httpServer.use(createPostFarmlandsRouter());
     httpServer.use(createPatchFarmlandsOwnerRouter());
+    httpServer.use(createPatchFarmlandsDataRouter());
 
     httpServer.all("*", (request, response) => {
         throw new NotFoundError();
