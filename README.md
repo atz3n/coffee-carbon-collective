@@ -4,6 +4,8 @@ We are participating in the Consensus Hackathon - web3athon - and will have our 
 ## Problem:
 Rising temperatures are going to reduce the area suitable for growing coffee by up to 50% by 2050.
 
+![image](https://user-images.githubusercontent.com/13486466/191007548-47ca0beb-cb9c-4d09-b36f-97dbfb3ec799.png)
+
 Coffee farmers suffer from climate change affecting their farmers and recognize the urge to transition to agroforestry to protect their farms and future. You can read more about agroforestry here.
 
 During the last months, we spoke to more than 50 farmers in Colombia, Costa Rica, Guatemala, and Brazil. We also did 25 face-to-face interviews at World of Coffee (the largest coffee industry event, June 2022) and talked to 20 coffee, regenerative agriculture, and carbon project development professionals:
@@ -24,7 +26,10 @@ We believe that there is a great opportunity to build a solution for insetting, 
 ## Impact:
 There are 10.2 million ha of coffee land worldwide, 84% of coffee is grown under sun in mono-crop farms and only 16% on average - shade or agroforestry grown. You can read about the impact of agroforestry systems here.
 
-Carbon sequestration potential (carbon stock) for agroforestry-grown coffee is 6.5 tons/ha in comparison to 2.6 tons/ha with conventional production. Check out more here. At the moment coffee producing areas sequester 32,508,898.50 tons of carbon, but switching to agroforestry has the potential to sequester 34,204,306.50 tons more! Check out calculations here.
+Carbon sequestration potential (carbon stock) for agroforestry-grown coffee is 6.5 tons/ha in comparison to 2.6 tons/ha with conventional production. Check out more (here)[https://www.notion.so/Intro-to-Agroforestry-2d4b578479444a979e00e191cde88bea]. At the moment coffee producing areas sequester 32,508,898.50 tons of carbon, but switching to agroforestry has the potential to sequester 34,204,306.50 tons more! Check out calculations (here)[https://www.notion.so/Intro-to-Agroforestry-2d4b578479444a979e00e191cde88bea].
+
+![image](https://user-images.githubusercontent.com/13486466/191007583-04b4f5e2-64e4-4b09-b8d8-dac5c56ae15c.png)
+
 
 Besides, switching to agroforestry will mean:
 
