@@ -1,16 +1,32 @@
-# mobileapp
+### Prerequisites
 
-A new Flutter project.
+This is a list, things you need to use the software and how to install them.
 
-## Getting Started
+- flutter
+  ```sh
+  https://flutter.dev/docs/get-started/install
+  ```
+- Install a mobile emulator and start
 
-This project is a starting point for a Flutter application.
+  ```sh
+  https://developer.android.com/studio/install
+  ```
 
-A few resources to get you started if this is your first Flutter project:
+  or
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  ```sh
+  https://developer.apple.com/library/archive/documentation/IDEs/Conceptual/iOS_Simulator_Guide/GettingStartedwithiOSSimulator/GettingStartedwithiOSSimulator.html#//apple_ref/doc/uid/TP40012848-CH5-SW1
+  ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/atz3n/coffee-carbon-collective.git
+   ```
+2. ```sh
+   flutter pub get
+   ```
+3. ```sh
+   flutter run
+   ```
