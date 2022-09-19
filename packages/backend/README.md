@@ -52,4 +52,4 @@ yarn start
 
 ## API
 
-There is no swagger description yet. For a description have a look into the route controllers. You can find them at `src/http/routes/<route>/<method>/../<lower case file>`. E.g. the controller for the farmers creation route can be found at `src/http/routes/farmers/post/postFarmers.ts`
+There is no swagger description yet. For a description have a look into the route controllers. You can find them at `src/http/routes/<route>/<method>/../<lower case file>`. E.g. the controller for the farmers creation route can be found at `src/http/routes/farmers/post/postFarmers.ts`. Currently implemented is the farmland registration and patching workflows.
