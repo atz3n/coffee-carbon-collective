@@ -1,7 +1,7 @@
-##About:
+## About:
 We are participating in the Consensus Hackathon - web3athon - and will have our first prototype released on 20th September 2022. We will accumulate the learnings in a GitBook and share them with the grant supporters. Stay tuned!
 
-##Problem:
+## Problem:
 Rising temperatures are going to reduce the area suitable for growing coffee by up to 50% by 2050.
 
 Coffee farmers suffer from climate change affecting their farmers and recognize the urge to transition to agroforestry to protect their farms and future. You can read more about agroforestry here.
@@ -21,7 +21,7 @@ Farmer enrolls into agroforestry transition program with CCC, CCC quantifies fut
 
 We believe that there is a great opportunity to build a solution for insetting, not offsetting. There is a strong commitment of traders and roasters to reducing the carbon footprint of coffee production and a strong will to support the farmers they work with. However, like any carbon credit buyer, they need transparency and accountability. We are developing our solution on Celo and Filecoin, using a dMRV infrastructure like dMeter or MRV Collective.
 
-##Impact:
+## Impact:
 There are 10.2 million ha of coffee land worldwide, 84% of coffee is grown under sun in mono-crop farms and only 16% on average - shade or agroforestry grown. You can read about the impact of agroforestry systems here.
 
 Carbon sequestration potential (carbon stock) for agroforestry-grown coffee is 6.5 tons/ha in comparison to 2.6 tons/ha with conventional production. Check out more here. At the moment coffee producing areas sequester 32,508,898.50 tons of carbon, but switching to agroforestry has the potential to sequester 34,204,306.50 tons more! Check out calculations here.
@@ -35,7 +35,7 @@ Improve productivity: Trees in the croplands improve productivity and create car
 Prevent deforestation: Tropical deforestation is responsible for 25% of the net annual CO2 emissions worldwide
 Improve farmers’ resilience to extreme weather, especially drought and frost
 
-##Roadmap:
+## Roadmap:
 Stage 1: Prototype & Methodology (September - December 2022) - GR15 funding
 
 Prototype of the carbon sequestration methodology - data collection from farmers and analysis, modeling resources necessary for farm transition, incl. financial, labor, and the time required for transition, calculator of pre-financing needed based on farmer’s data
@@ -57,10 +57,10 @@ Form a DAO for farmers and funders
 
 We are committed to building a solution that benefits coffee farmers and funders, as well as the entire ReFi community. The methodology we develop will be made open source and accessible to anyone who needs it. We will make our learnings from the field projects and working with funders public and accessible for other regenerators.
 
-##Team:
+## Team:
 We are a team of coffee & tech people with various backgrounds and experiences: entrepreneurs, coffee traders and roasters, UX / UI designers, climate scientists, blockchain developers, and product managers.
 
-##Partners & Collaborators:
+## Partners & Collaborators:
 Agrivero.ai - AI-enabled green coffee quality control solution
 The Chain Collaborative - sustainability coffee consulting
 Digital Coffee Future - consulting and educational programs
