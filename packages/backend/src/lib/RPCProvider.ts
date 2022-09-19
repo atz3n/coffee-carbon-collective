@@ -1,4 +1,5 @@
-import { StaticJsonRpcProvider, WebSocketProvider, Provider } from "@ethersproject/providers";
+import { StaticJsonRpcProvider, WebSocketProvider } from "@ethersproject/providers";
+import { constants } from "ethers";
 import { logger } from "../utils/logger";
 
 
@@ -8,6 +9,8 @@ export interface RPCProviderWSConfig {
     keepAliveIntervalSec: number;
     reconnectDelaySec: number;
 }
+
+export type ReconnectCb = (provider: StaticJsonRpcProvider | WebSocketProvider) => Promise<void>;
 
 
 export class RPCProvider {
@@ -23,7 +26,7 @@ export class RPCProvider {
     private static keepAliveInterval: ReturnType<typeof setInterval>;
     private static connectionCheckInterval: ReturnType<typeof setInterval>;
     private static connectionCheckTimeout: ReturnType<typeof setInterval>;
-    private static reconnectCb?: (provider: Provider) => Promise<void>;
+    private static reconnectCb?: ReconnectCb;
     private static isTryingToReconnect = false;
 
 
@@ -35,7 +38,7 @@ export class RPCProvider {
     }
 
 
-    public static async init(url: string, reconnectCb?: (provider: Provider) => Promise<void>): Promise<void> {
+    public static async init(url: string, reconnectCb?: ReconnectCb): Promise<void> {
         if (!this.isReconnect) {
             this.url = url;
             this.reconnectCb = reconnectCb;
@@ -71,6 +74,10 @@ export class RPCProvider {
             });
         } else {
             this.provider = new StaticJsonRpcProvider(url);
+        }
+
+        if (this.isCelo()) {
+            this.supportCelo();
         }
     }
 
@@ -112,5 +119,21 @@ export class RPCProvider {
 
     private static async sleep(timeInMs: number): Promise<void> {
         await new Promise(r => setTimeout(r, timeInMs));
+    }
+
+    private static isCelo(): boolean {
+        return this.url.includes("celo");
+    }
+
+    private static supportCelo(): void {
+        //Fixes Celo ethers issue -> https://github.com/ethers-io/ethers.js/issues/1735#issuecomment-949833889
+        const originalBlockFormatter = this.provider.formatter._block;
+        this.provider.formatter._block = (value, format) => originalBlockFormatter(
+            {
+                gasLimit: constants.Zero,
+                ...value,
+            },
+            format,
+        );
     }
 }
