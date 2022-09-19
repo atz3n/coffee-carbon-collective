@@ -173,6 +173,6 @@ dist
 # Local History for Visual Studio Code
 .history/
 
-.data/
+/data/
 jwt-key/*
 dev/

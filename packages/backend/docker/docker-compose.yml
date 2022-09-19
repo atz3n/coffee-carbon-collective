@@ -20,6 +20,7 @@ services:
       - CONTRACTS_OWNER_SECRET=0x5fe735cc65db34f63e18cd8615ee1f91b97a4b59d4916cb145738f91798d77c4
       - NFT_STORAGE_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGRjN2E1YkVFMjU1MjJhMjBkMmRmRGMwZUY5MzgwODRjMzcxRjU2YWEiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY2MzMzNTY5OTMyMiwibmFtZSI6IndlYjNhdGhvbiJ9.FoEu9Rvh2E51BnyF-HM3n309aIq_8bzj_pIxiOXx7_o
       - IPFS_GATEWAY_URLS=https://infura-ipfs.io/ipfs,https://ipfs.io/ipfs,https://gateway.pinata.cloud/ipfs,https://dweb.link/ipfs
+      # - CATCH_UP_ALL_CONTRACT_EVENTS=true
   ccc-backend-db:
     image: mongo:4.4.1-bionic
     networks:
