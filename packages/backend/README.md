@@ -48,3 +48,8 @@ yarn start
 # stop dev db
 ./scripts/stop-dev-db.sh
 ```
+
+
+## API
+
+There is no swagger description yet. For a description have a look into the route controllers. You can find them at `src/http/routes/<route>/<method>/../<lower case file>`. E.g. the controller for the farmers creation route can be found at `src/http/routes/farmers/post/postFarmers.ts`
