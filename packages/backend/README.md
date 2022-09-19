@@ -1,11 +1,11 @@
 # backend
 
-This folder contains the ccc' backend project. To begin development, you must have [Node.js](https://nodejs.org/en/) and the [Yarn](https://yarnpkg.com) package manager installed.
+This folder contains the ccc's backend project. To begin development, you must have [Node.js](https://nodejs.org/en/) and the [Yarn](https://yarnpkg.com) package manager installed.
 
 You also need a valid `.env` file. The easiest way to get one is by copying the `settings.env` file and rename the copy to `.env`. The default setup should be good to go.
 
 
-## Commands
+## Dev Commands
 
 ```bash
 # start in watch mode
@@ -27,7 +27,24 @@ yarn build
 yarn start
 ```
 
-To build the docker image, run:
+## Docker Commands
+
 ``` bash
+# build docker image
 ./scripts/build-docker-image.sh
+
+# run backend with docker compose
+./scripts/run-docker.sh
+
+# pause docker composed backend
+./scripts/pause-docker.sh
+
+# stop docker composed backend
+./scripts/stop-docker.sh
+
+# run a dev db for development
+./scripts/run-dev-db.sh
+
+# stop dev db
+./scripts/stop-dev-db.sh
 ```
