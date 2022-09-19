@@ -38,7 +38,6 @@ export class PatchFarmlandsDataService implements RouteService {
             throw new BadRequestError("Farmland does not exist");
         }
 
-
         const cid = await this.options.ipfsStorer.store({
             country: country || farmland.country || "",
             description: description || farmland.description || "",
