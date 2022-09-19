@@ -32,7 +32,7 @@ const event = {
 };
 
 
-if (!config.skipTests.includes("newProduct")) {
+if (!config.skipTests.includes("tokenMint")) {
     const blockchainInfo =  <BlockchainInfoStoreInMemory> BlockchainInfoStore.get();
     const tokenHolderStore = <TokenHolderStoreInMemory> TokenHolderStore.get();
 

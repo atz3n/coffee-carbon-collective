@@ -42,8 +42,11 @@ export class PostFarmlandsService implements RouteService {
 
 
     public async run(inputs: Inputs): Promise<Outputs> {
-        const { owner, name, description, imageName, imageData, country, size,
-            produce, altitude, kmlData, kmlName, longitude, latitude } = inputs;
+        const {
+            owner, name, description, imageName, imageData,
+            country, size, produce, altitude, kmlData,
+            kmlName, longitude, latitude
+        } = inputs;
         const tokenId = this.constructTokenId(latitude, longitude);
 
         const farmland = (await this.options.farmlandStore.find({ tokenId }))[0];
@@ -53,7 +56,7 @@ export class PostFarmlandsService implements RouteService {
 
         const farmer = (await this.options.farmerStore.find({ address: owner }))[0];
         if (!farmer) {
-            throw new BadRequestError("farmer does not exist");
+            throw new BadRequestError("Farmer does not exist");
         }
 
         const cid = await this.options.ipfsStorer.store({
@@ -82,12 +85,12 @@ export class PostFarmlandsService implements RouteService {
 
     private constructTokenId(lat: number, long: number): string {
         const latFills = Math.abs(lat) < 10 ? "0" : "";
-        const latSig = lat > 0 ? "1" : "2";
-        const latString = latSig + latFills + lat.toString().replace("-", "").replace(".", "");
+        const latSign = lat > 0 ? "1" : "2";
+        const latString = latSign + latFills + lat.toString().replace("-", "").replace(".", "");
 
         const longFills = Math.abs(long) < 10 ? "00" : Math.abs(long) < 100 ? "0" : "";
-        const longSig = long > 0 ? "1" : "2";
-        const longString = longSig + longFills + long.toString().replace("-", "").replace(".", "");
+        const longSign = long > 0 ? "1" : "2";
+        const longString = longSign + longFills + long.toString().replace("-", "").replace(".", "");
 
         return latString + longString;
     }

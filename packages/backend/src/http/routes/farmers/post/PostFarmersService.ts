@@ -28,7 +28,7 @@ export class PostFarmersService implements RouteService {
 
         const farmer = (await this.options.farmerStore.find({ email }))[0];
         if (farmer) {
-            throw new BadRequestError("email already used");
+            throw new BadRequestError("Email already used");
         }
 
         const uid = randomUUID();
